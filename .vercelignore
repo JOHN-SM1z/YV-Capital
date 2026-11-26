@@ -1,0 +1,7 @@
+# Not needed to build the app, and never uploaded. Leading slashes matter:
+# "supabase/" would also exclude src/lib/supabase.
+.env*
+/.claude/
+/docs/
+/supabase/
+/tests/

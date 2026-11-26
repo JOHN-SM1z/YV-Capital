@@ -1,0 +1,1396 @@
+{
+  "_about": "Yoshlar Ventures portfolio as listed on https://yoshlarventures.uz (retrieved 2026-11-26). yv_check_usd is the figure printed on each portfolio card; the site does not label it. Where press coverage exists it matches YV's reported investment, but confirm internally. Funding stage is set only where a public source states it. Records are public sources only. Outlook is an internal, signals-based estimate, not a statement from the company. Rounds are structured from those records only: each cites the record it came from, round type is set only where the source names it, the date is when the source reported it, and a lead is marked only where a source says so.",
+  "retrieved": "2026-11-26",
+  "companies": [
+    {
+      "name": "IjaraSoft",
+      "sector": "PropTech",
+      "one_liner": "Automation platform for the rental sector, B2B and B2C",
+      "yv_check_usd": 15000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing. Ask the founders for current traction before any outreach.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Moomkin",
+      "sector": "MarTech",
+      "one_liner": "Location-based discounts and promotions",
+      "yv_check_usd": 30000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Adride",
+      "sector": "AdTech",
+      "one_liner": "Geotargeted advertising on taxi screens",
+      "yv_check_usd": 30000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Central Asia venture market: July 2026 roundup",
+          "url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "publisher": "The Tech (the-tech.kz)",
+          "date": "2026-07-27",
+          "kind": "funding",
+          "summary": "Yoshlar Ventures invested $30,000 in AdRide, an AdTech platform reaching audiences through urban mobility.",
+          "amount_usd": 30000,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "low",
+        "window": "H2 2027",
+        "rationale": "Small first check in July 2026 with no public traction yet; a next round typically follows 12–18 months later once revenue is proven.",
+        "signals": [
+          "Check $30K (Jul 2026)",
+          "No public traction data"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "yv-2026-07",
+          "source_url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "date": "2026-07-27",
+          "type": null,
+          "amount_usd": 30000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 30000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "Diip.uz",
+      "sector": "Logistics",
+      "one_liner": "Cargo and transport matching",
+      "yv_check_usd": 100000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "One of YV's larger checks ($100K) but no public coverage. Worth a traction check-in.",
+        "signals": [
+          "YV check $100K"
+        ]
+      },
+      "rounds": []
+    },
+    {
+      "name": "Lumi",
+      "sector": "EdTech",
+      "one_liner": "Find and book children's clubs",
+      "yv_check_usd": 40000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Between",
+      "sector": "MarTech",
+      "one_liner": "Connects businesses with micro-influencers",
+      "yv_check_usd": 80000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": [
+          "YV check $80K"
+        ]
+      },
+      "rounds": []
+    },
+    {
+      "name": "Business Robots AI",
+      "sector": "AI / SaaS",
+      "one_liner": "AI agent for sales and customer communication",
+      "yv_check_usd": 150000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "Large YV check ($150K) but no public coverage found under this name.",
+        "signals": [
+          "YV check $150K"
+        ]
+      },
+      "rounds": []
+    },
+    {
+      "name": "Tingla AI",
+      "sector": "EdTech",
+      "one_liner": "AI audio and text book reading",
+      "yv_check_usd": 80000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": [
+          "YV check $80K"
+        ]
+      },
+      "rounds": []
+    },
+    {
+      "name": "Mebelim",
+      "sector": "E-commerce",
+      "one_liner": "Unified CRM/ERP for furniture businesses",
+      "yv_check_usd": 35000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "The CarGo",
+      "sector": "Logistics",
+      "one_liner": "Management platform for car-transport brokers",
+      "yv_check_usd": 80000,
+      "stage": "seed",
+      "founders": [
+        {
+          "name": "Ziyobek Turdiev",
+          "role": "CEO"
+        },
+        {
+          "name": "Bakhtiyor Ergashev",
+          "role": "CTO"
+        }
+      ],
+      "metrics": [
+        {
+          "key": "customers",
+          "value": 10,
+          "unit": "count",
+          "period": "Jun 2026",
+          "source": "The Tech (the-tech.kz), 2026-06-18 — US brokerages using the platform"
+        }
+      ],
+      "records": [
+        {
+          "title": "Uzbek startup TheCarGo raised $110,000",
+          "url": "https://the-tech.kz/uzbekskij-startap-thecargo-privlek-110-000-investiczij/",
+          "publisher": "The Tech (the-tech.kz)",
+          "date": "2026-06-18",
+          "kind": "funding",
+          "summary": "$110,000 seed: $80,000 from Yoshlar Ventures, $10,000 from an a16z scout and $20,000 from a local angel; AI platform for US auto-transport brokers.",
+          "amount_usd": 110000,
+          "co_investors": [
+            "a16z scout (angel)",
+            "Local private investor"
+          ]
+        },
+        {
+          "title": "Uzbek founders building in San Francisco — theCargo",
+          "url": "https://sf.yoshlarventures.uz",
+          "publisher": "Yoshlar Ventures SF office",
+          "date": "2026-10-17",
+          "kind": "directory",
+          "summary": "Listed in the YV San Francisco founders class as an AI operating system for US auto-transport brokers.",
+          "amount_usd": null,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "high",
+        "window": "Q1–Q2 2027",
+        "rationale": "Paying US customers (10 brokerages), US presence via the YV SF office and a US angel on the cap table. A seed extension or full seed round is the logical next step within 6–9 months.",
+        "signals": [
+          "Seed $110K (Jun 2026)",
+          "10 US brokerages paying",
+          "US angel investor",
+          "YV SF residency"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "seed-2026-06",
+          "source_url": "https://the-tech.kz/uzbekskij-startap-thecargo-privlek-110-000-investiczij/",
+          "date": "2026-06-18",
+          "type": "seed",
+          "amount_usd": 110000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 80000,
+              "lead": false
+            },
+            {
+              "name": "a16z scout (angel)",
+              "amount_usd": 10000,
+              "lead": false
+            },
+            {
+              "name": "Local private investor",
+              "amount_usd": 20000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "ContentCoach",
+      "sector": "MarTech",
+      "one_liner": "AI-personalized content strategy",
+      "yv_check_usd": 35000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Fonus Kids",
+      "sector": "EdTech",
+      "one_liner": "Safe educational video for children",
+      "yv_check_usd": 35000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Makon AI",
+      "sector": "EdTech",
+      "one_liner": "AI preparation for SAT and ACT",
+      "yv_check_usd": 125000,
+      "stage": "seed",
+      "founders": [
+        {
+          "name": "Asilbek Ashurov",
+          "role": "Co-founder"
+        },
+        {
+          "name": "Kamoliddin Yaxshilikov",
+          "role": "Co-founder"
+        },
+        {
+          "name": "Asadbek Noyibjonov",
+          "role": "Co-founder"
+        }
+      ],
+      "metrics": [
+        {
+          "key": "active_users",
+          "value": 50000,
+          "unit": "count",
+          "period": "Oct 2026",
+          "source": "DigitalBusiness.kz founder interview, 2026-10-12 (registered users)"
+        },
+        {
+          "key": "customers",
+          "value": 500,
+          "unit": "count",
+          "period": "Oct 2026",
+          "source": "DigitalBusiness.kz founder interview, 2026-10-12 (paying users)"
+        },
+        {
+          "key": "mrr",
+          "value": 12000,
+          "unit": "USD",
+          "period": "Oct 2026",
+          "source": "DigitalBusiness.kz founder interview, 2026-10-12"
+        }
+      ],
+      "records": [
+        {
+          "title": "19-year-old Uzbek founder launched an AI exam-prep startup and raised $380,000",
+          "url": "https://digitalbusiness.kz/en/2026-10-12/19-year-old-uzbek-founder-launched-an-ai-exam-prep-startup-and-raised-380000/",
+          "publisher": "DigitalBusiness.kz",
+          "date": "2026-10-12",
+          "kind": "funding",
+          "summary": "About $380K raised in total, including a $300K round closed June 2026 with IT Park Ventures, Yoshlar Ventures and AloqaVentures; US is the main market.",
+          "amount_usd": 300000,
+          "co_investors": [
+            "IT Park Ventures",
+            "AloqaVentures"
+          ]
+        },
+        {
+          "title": "Makon AI — financials",
+          "url": "https://www.cbinsights.com/company/makon-ai/financials",
+          "publisher": "CB Insights",
+          "date": null,
+          "kind": "directory",
+          "summary": "CB Insights lists Yoshlar Ventures among Makon AI's seed investors.",
+          "amount_usd": null,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "high",
+        "window": "H1 2027",
+        "rationale": "Strong early revenue (~$12K MRR, ~500 paying users) in the US market and three institutional investors. At this growth rate a larger seed round is likely within 6–12 months of the June 2026 close.",
+        "signals": [
+          "Seed $300K (Jun 2026)",
+          "~$12K MRR",
+          "50K registered users",
+          "US B2B school partners"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "round-2026-06",
+          "source_url": "https://digitalbusiness.kz/en/2026-10-12/19-year-old-uzbek-founder-launched-an-ai-exam-prep-startup-and-raised-380000/",
+          "date": "2026-10-12",
+          "type": null,
+          "amount_usd": 300000,
+          "participants": [
+            {
+              "name": "IT Park Ventures",
+              "amount_usd": null,
+              "lead": false
+            },
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": null,
+              "lead": false
+            },
+            {
+              "name": "Aloqa Ventures",
+              "amount_usd": null,
+              "lead": false
+            }
+          ],
+          "note": "Closed in June 2026 according to the source, which reports about $380K raised in total."
+        }
+      ]
+    },
+    {
+      "name": "Nav AI",
+      "sector": "AI / SaaS",
+      "one_liner": "AI that automates phone-based customer contact",
+      "yv_check_usd": 80000,
+      "stage": null,
+      "founders": [
+        {
+          "name": "Sardor Davlatov",
+          "role": "Co-founder"
+        },
+        {
+          "name": "Kilichbek Khaydarov",
+          "role": "Co-founder"
+        }
+      ],
+      "records": [
+        {
+          "title": "How a Tashkent entrepreneur built an AI agent that understands Uzbek speech",
+          "url": "https://the-tech.kz/kak-predprinimatel-iz-tashkenta-sozdal-ii-agenta-kotoryj-ponimaet-uzbekskuyu-rech/",
+          "publisher": "The Tech (the-tech.kz)",
+          "date": "2026-11-11",
+          "kind": "news",
+          "summary": "Latest round $80K from Yoshlar Ventures after a $20K first check from Sarmo Ventures; voice agents have handled 200,000+ calls, including for government clients.",
+          "amount_usd": 80000,
+          "co_investors": [
+            "Sarmo Ventures"
+          ]
+        }
+      ],
+      "outlook": {
+        "likelihood": "medium",
+        "window": "H2 2027",
+        "rationale": "Real usage (200K+ calls, government clients) but the latest round just closed. Expect a seed raise once commercial contracts scale.",
+        "signals": [
+          "$80K from YV (2026)",
+          "200K+ calls handled",
+          "Government clients"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "sarmo-first",
+          "source_url": "https://the-tech.kz/kak-predprinimatel-iz-tashkenta-sozdal-ii-agenta-kotoryj-ponimaet-uzbekskuyu-rech/",
+          "date": null,
+          "type": null,
+          "amount_usd": 20000,
+          "participants": [
+            {
+              "name": "Sarmo Ventures",
+              "amount_usd": 20000,
+              "lead": false
+            }
+          ],
+          "note": "First check; the source gives no date."
+        },
+        {
+          "key": "yv-latest",
+          "source_url": "https://the-tech.kz/kak-predprinimatel-iz-tashkenta-sozdal-ii-agenta-kotoryj-ponimaet-uzbekskuyu-rech/",
+          "date": "2026-11-11",
+          "type": null,
+          "amount_usd": 80000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 80000,
+              "lead": false
+            }
+          ],
+          "note": "Described by the source as the latest round."
+        }
+      ]
+    },
+    {
+      "name": "SecurePrompt",
+      "sector": "Cybersecurity",
+      "one_liner": "Securing AI prompts for banks",
+      "yv_check_usd": 40000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Central Asia venture market: July 2026 roundup",
+          "url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "publisher": "The Tech (the-tech.kz)",
+          "date": "2026-07-27",
+          "kind": "funding",
+          "summary": "Yoshlar Ventures invested $40,000 in SecurePrompt, which protects confidential data used with AI tools.",
+          "amount_usd": 40000,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "low",
+        "window": "H2 2027",
+        "rationale": "Early-stage check (Jul 2026) with no public traction. Bank pilots would be the trigger for a next round.",
+        "signals": [
+          "Check $40K (Jul 2026)"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "yv-2026-07",
+          "source_url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "date": "2026-07-27",
+          "type": null,
+          "amount_usd": 40000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 40000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "Onless",
+      "sector": "EdTech",
+      "one_liner": "AI preparation for the driving-licence exam",
+      "yv_check_usd": 25000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Central Asia venture market: July 2026 roundup",
+          "url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "publisher": "The Tech (the-tech.kz)",
+          "date": "2026-07-27",
+          "kind": "funding",
+          "summary": "Yoshlar Ventures added $25,000 to Onless; AloqaVentures had invested $10,000 separately.",
+          "amount_usd": 25000,
+          "co_investors": [
+            "AloqaVentures"
+          ]
+        }
+      ],
+      "outlook": {
+        "likelihood": "low",
+        "window": "H2 2027",
+        "rationale": "Two small local checks in 2026, no public traction data.",
+        "signals": [
+          "$35K across two funds (2026)"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "aloqa",
+          "source_url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "date": null,
+          "type": null,
+          "amount_usd": 10000,
+          "participants": [
+            {
+              "name": "Aloqa Ventures",
+              "amount_usd": 10000,
+              "lead": false
+            }
+          ],
+          "note": "Invested separately; the source gives no date."
+        },
+        {
+          "key": "yv-2026-07",
+          "source_url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "date": "2026-07-27",
+          "type": null,
+          "amount_usd": 25000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 25000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "Camvi",
+      "sector": "Computer Vision",
+      "one_liner": "Vision analytics for retail",
+      "yv_check_usd": 40000,
+      "stage": null,
+      "founders": [
+        {
+          "name": "Olamgir Rajabboev",
+          "role": "Founder"
+        }
+      ],
+      "records": [
+        {
+          "title": "Central Asia venture market: July 2026 roundup",
+          "url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "publisher": "The Tech (the-tech.kz)",
+          "date": "2026-07-27",
+          "kind": "funding",
+          "summary": "Yoshlar Ventures invested $40,000 in Camvi, which analyses customer flow, staff efficiency and marketing activity.",
+          "amount_usd": 40000,
+          "co_investors": []
+        },
+        {
+          "title": "How a founder from Uzbekistan built an AI system for business and got into Alchemist",
+          "url": "https://the-tech.kz/kak-paren-iz-uzbekistana-sozdal-ai-sistemu-dlya-biznesa-i-popal-v-amerikanskij-akselerator-alchemist/",
+          "publisher": "The Tech (the-tech.kz)",
+          "date": "2026-11-03",
+          "kind": "news",
+          "summary": "Accepted to Alchemist Silkroad SVR; named paying clients include MacBro and Shiribom.",
+          "amount_usd": null,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "high",
+        "window": "Q1–Q2 2027",
+        "rationale": "Paying retail clients plus acceptance into Alchemist Silkroad, whose demo day is a natural fundraising moment. Good candidate to introduce to international co-investors now.",
+        "signals": [
+          "Check $40K (Jul 2026)",
+          "Alchemist Silkroad SVR",
+          "Named paying clients"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "yv-2026-07",
+          "source_url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "date": "2026-07-27",
+          "type": null,
+          "amount_usd": 40000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 40000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "Body Tester",
+      "sector": "HealthTech",
+      "one_liner": "AI device for quick health diagnostics",
+      "yv_check_usd": 35000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Central Asia venture market: July 2026 roundup",
+          "url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "publisher": "The Tech (the-tech.kz)",
+          "date": "2026-07-27",
+          "kind": "funding",
+          "summary": "Yoshlar Ventures invested $35,000 in Body Tester, a HealthTech solution for quick analysis of overall health.",
+          "amount_usd": 35000,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "low",
+        "window": "2027–2028",
+        "rationale": "Hardware plus health certification usually lengthens the path to the next round.",
+        "signals": [
+          "Check $35K (Jul 2026)",
+          "Hardware / certification needed"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "yv-2026-07",
+          "source_url": "https://the-tech.kz/glavnye-novosti-venchurnogo-rynka-czentralnoj-azii-iyul-2026/",
+          "date": "2026-07-27",
+          "type": null,
+          "amount_usd": 35000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 35000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "Prestige Club",
+      "sector": "TravelTech",
+      "one_liner": "White-label travel platform for banks",
+      "yv_check_usd": 150000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Uzbek startup Prestige Club raised $150,000 from Yoshlar Ventures",
+          "url": "https://the-tech.kz/uzbekskij-startap-prestige-club-privlek-150-000-ot-yoshlar-ventures/",
+          "publisher": "The Tech (the-tech.kz)",
+          "date": "2026-08-17",
+          "kind": "funding",
+          "summary": "Yoshlar Ventures invested $150,000 in Prestige Club, a white-label B2B travel platform for banks and fintechs.",
+          "amount_usd": 150000,
+          "co_investors": []
+        },
+        {
+          "title": "Which Uzbekistani startups raised investment in August?",
+          "url": "https://www.spot.uz/en/2026/09/10/startups-investments/",
+          "publisher": "Spot.uz",
+          "date": "2026-09-10",
+          "kind": "news",
+          "summary": "Prestige Club's $150,000 was the largest disclosed round in August 2026 (Stanbase data).",
+          "amount_usd": 150000,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "medium",
+        "window": "H2 2027",
+        "rationale": "Largest August 2026 round in Uzbekistan and a B2B model sold through banks. Signed bank integrations would trigger a seed round.",
+        "signals": [
+          "$150K (Aug 2026)",
+          "B2B distribution via banks"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "yv-2026-08",
+          "source_url": "https://the-tech.kz/uzbekskij-startap-prestige-club-privlek-150-000-ot-yoshlar-ventures/",
+          "date": "2026-08-17",
+          "type": null,
+          "amount_usd": 150000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 150000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "DriveX",
+      "sector": "Mobility",
+      "one_liner": "Modular off-road transport for mountain areas",
+      "yv_check_usd": 25000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Which Uzbekistani startups raised investment in August?",
+          "url": "https://www.spot.uz/en/2026/09/10/startups-investments/",
+          "publisher": "Spot.uz",
+          "date": "2026-09-10",
+          "kind": "funding",
+          "summary": "DriveX raised $40,000: $25,000 from Yoshlar Ventures and $15,000 from Turin Polytechnic University.",
+          "amount_usd": 40000,
+          "co_investors": [
+            "Turin Polytechnic University"
+          ]
+        }
+      ],
+      "outlook": {
+        "likelihood": "low",
+        "window": "2027–2028",
+        "rationale": "Hardware company at prototype stage. It has an international co-investor (Politecnico di Torino), which helps with later introductions.",
+        "signals": [
+          "$40K (Aug 2026)",
+          "International co-investor"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "round-2026-08",
+          "source_url": "https://www.spot.uz/en/2026/09/10/startups-investments/",
+          "date": "2026-09-10",
+          "type": null,
+          "amount_usd": 40000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 25000,
+              "lead": false
+            },
+            {
+              "name": "Turin Polytechnic University",
+              "amount_usd": 15000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "Drone EduTrain",
+      "sector": "EdTech",
+      "one_liner": "Drone lab ecosystem for schools",
+      "yv_check_usd": 25000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Educoin",
+      "sector": "EdTech",
+      "one_liner": "Digitizing learning motivation",
+      "yv_check_usd": 20700,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Hisobchi-AI",
+      "sector": "FinTech",
+      "one_liner": "AI financial bookkeeper",
+      "yv_check_usd": 37500,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Inter-AI",
+      "sector": "HR Tech",
+      "one_liner": "AI interviews and candidate screening",
+      "yv_check_usd": 38000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Tilmoch-AI",
+      "sector": "AI / SaaS",
+      "one_liner": "AI editor for the Uzbek language",
+      "yv_check_usd": 50000,
+      "stage": null,
+      "founders": [
+        {
+          "name": "Mukhammadsaid Mamasaidov",
+          "role": "Founder"
+        }
+      ],
+      "metrics": [
+        {
+          "key": "active_users",
+          "value": 130000,
+          "unit": "count",
+          "period": "Sep 2025",
+          "source": "Spot.uz, 2025-09-12 (monthly active users)"
+        },
+        {
+          "key": "customers",
+          "value": 50,
+          "unit": "count",
+          "period": "Sep 2025",
+          "source": "Spot.uz, 2025-09-12 (B2B clients)"
+        }
+      ],
+      "records": [
+        {
+          "title": "Yoshlar Ventures has made its first investment!",
+          "url": "https://gov.uz/en/yoshlar/news/view/85292",
+          "publisher": "gov.uz (Youth Affairs Agency)",
+          "date": "2025-09-11",
+          "kind": "funding",
+          "summary": "YV's first investment: $50,000 in Tilmoch AI, an AI translation and grammar platform for Turkic languages, alongside Aloqa Ventures and IT Park Ventures.",
+          "amount_usd": 50000,
+          "co_investors": [
+            "Aloqa Ventures",
+            "IT Park Ventures"
+          ]
+        },
+        {
+          "title": "Tilmoch online translator raises $150K from three VC funds",
+          "url": "https://www.spot.uz/ru/2025/09/12/tilmoch/",
+          "publisher": "Spot.uz",
+          "date": "2025-09-12",
+          "kind": "funding",
+          "summary": "Round of $150,000: AloqaVentures $60K, Yoshlar Ventures $50K, IT Park Ventures $40K; 130K+ monthly active users and 50+ B2B clients.",
+          "amount_usd": 150000,
+          "co_investors": [
+            "AloqaVentures",
+            "IT Park Ventures"
+          ]
+        },
+        {
+          "title": "Uzbek founder builds AI translator for Turkic languages, startup valued at $1.5M",
+          "url": "https://digitalbusiness.kz/en/2026-10-08/uzbekistanets-sozdal-ii-perevodchik-dlya-tyurkskih-yazikov-startap-otsenili-v-15-mln/",
+          "publisher": "DigitalBusiness.kz",
+          "date": "2026-10-08",
+          "kind": "news",
+          "summary": "Founder interview: the round valued Tilmoch at $1.5 million, led by Aloqa Ventures.",
+          "amount_usd": null,
+          "co_investors": []
+        },
+        {
+          "title": "Inha University graduate's startup Tilmoch receives $40,000 from IT Park Ventures",
+          "url": "https://inha.uz/general/mukhammadsaid-mamasaidov-a-graduate-of-inha-university-in-tashkent-got-investments-for-his-startup-tilmoch-in-the-amount-of-40000-from-it-park-ventures/",
+          "publisher": "Inha University in Tashkent",
+          "date": null,
+          "kind": "news",
+          "summary": "IT Park Ventures' $40,000 investment in Tilmoch, founded by Inha graduate Mukhammadsaid Mamasaidov.",
+          "amount_usd": 40000,
+          "co_investors": [
+            "IT Park Ventures"
+          ]
+        },
+        {
+          "title": "Uzbek startups presented their projects in Washington",
+          "url": "https://outsource.gov.uz/en/media/uzbek-startups-presented-their-projects-in-washington-with-the-participation-of-the-us-presidential-special-representative",
+          "publisher": "IT Park Uzbekistan",
+          "date": null,
+          "kind": "news",
+          "summary": "Tilmoch took part in the AlchemistX Silicon Valley Residency and raised $15,000 from US angels.",
+          "amount_usd": 15000,
+          "co_investors": [
+            "US angel investors"
+          ]
+        }
+      ],
+      "outlook": {
+        "likelihood": "high",
+        "window": "Now – Q1 2027",
+        "rationale": "Fourteen months since the $150K round at a $1.5M valuation, with strong usage (130K+ MAU), 50+ B2B clients, AlchemistX residency and US angels. Typical timing for a seed round is now.",
+        "signals": [
+          "$150K round (Sep 2025)",
+          "130K+ MAU",
+          "AlchemistX residency",
+          "US angels"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "round-2025-09",
+          "source_url": "https://www.spot.uz/ru/2025/09/12/tilmoch/",
+          "date": "2025-09-12",
+          "type": null,
+          "amount_usd": 150000,
+          "participants": [
+            {
+              "name": "Aloqa Ventures",
+              "amount_usd": 60000,
+              "lead": true
+            },
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 50000,
+              "lead": false
+            },
+            {
+              "name": "IT Park Ventures",
+              "amount_usd": 40000,
+              "lead": false
+            }
+          ],
+          "note": "Lead investor per the DigitalBusiness.kz founder interview, which also reports a $1.5M valuation."
+        },
+        {
+          "key": "us-angels",
+          "source_url": "https://outsource.gov.uz/en/media/uzbek-startups-presented-their-projects-in-washington-with-the-participation-of-the-us-presidential-special-representative",
+          "date": null,
+          "type": null,
+          "amount_usd": 15000,
+          "participants": [
+            {
+              "name": "US angel investors",
+              "amount_usd": 15000,
+              "lead": false
+            }
+          ],
+          "note": "Raised during the AlchemistX Silicon Valley Residency; the source gives no date."
+        }
+      ]
+    },
+    {
+      "name": "Bozorly",
+      "sector": "FoodTech",
+      "one_liner": "Personal AI meal-planning assistant",
+      "yv_check_usd": 35000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Zehnly AI",
+      "sector": "EdTech",
+      "one_liner": "Game-based AI foreign-language app",
+      "yv_check_usd": 35000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "FieldyIO",
+      "sector": "AI / SaaS",
+      "one_liner": "Operations system for field-service companies",
+      "yv_check_usd": 40000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Which Uzbek startups raised investment in September?",
+          "url": "https://spot.uz/en/2026/10/13/startups-announcements",
+          "publisher": "Spot.uz",
+          "date": "2026-10-13",
+          "kind": "funding",
+          "summary": "Yoshlar Ventures invested $40,000 in FieldyIO, SaaS for service-sector dispatching, fieldwork monitoring and accounting; sales started May 2026.",
+          "amount_usd": 40000,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "low",
+        "window": "H2 2027",
+        "rationale": "Sales only began in May 2026. Recurring revenue over the next three quarters will decide the timing.",
+        "signals": [
+          "$40K (Sep 2026)",
+          "Sales since May 2026"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "yv-2026-09",
+          "source_url": "https://spot.uz/en/2026/10/13/startups-announcements",
+          "date": "2026-10-13",
+          "type": null,
+          "amount_usd": 40000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 40000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "Microgreen",
+      "sector": "AgriTech",
+      "one_liner": "Hydroponic microgreen and strawberry farm in Samarkand",
+      "yv_check_usd": 35000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Which Uzbek startups raised investment in September?",
+          "url": "https://spot.uz/en/2026/10/13/startups-announcements",
+          "publisher": "Spot.uz",
+          "date": "2026-10-13",
+          "kind": "funding",
+          "summary": "Yoshlar Ventures invested $35,000 in Microgreen, a hydroponic urban farm in Samarkand selling directly to customers.",
+          "amount_usd": 35000,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "low",
+        "window": "2027–2028",
+        "rationale": "A capital-intensive farm model. Growth is more likely financed by debt or grants than by venture rounds.",
+        "signals": [
+          "$35K (Sep 2026)",
+          "Asset-heavy model"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "yv-2026-09",
+          "source_url": "https://spot.uz/en/2026/10/13/startups-announcements",
+          "date": "2026-10-13",
+          "type": null,
+          "amount_usd": 35000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 35000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "Bonu",
+      "sector": "FoodTech",
+      "one_liner": "Custom cake constructor",
+      "yv_check_usd": 40000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Which Uzbek startups raised investment in September?",
+          "url": "https://spot.uz/en/2026/10/13/startups-announcements",
+          "publisher": "Spot.uz",
+          "date": "2026-10-13",
+          "kind": "funding",
+          "summary": "Yoshlar Ventures invested $40,000 in Bonu, an app for ordering celebration cakes with a 3D customizer and birthday CRM.",
+          "amount_usd": 40000,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "low",
+        "window": "H2 2027",
+        "rationale": "Early consumer marketplace; needs proof of order volume before a next round.",
+        "signals": [
+          "$40K (Sep 2026)"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "yv-2026-09",
+          "source_url": "https://spot.uz/en/2026/10/13/startups-announcements",
+          "date": "2026-10-13",
+          "type": null,
+          "amount_usd": 40000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 40000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "UrbanDrive",
+      "sector": "Mobility",
+      "one_liner": "Online marketplace for new cars",
+      "yv_check_usd": 100000,
+      "stage": null,
+      "records": [
+        {
+          "title": "Which Uzbek startups raised investment in September?",
+          "url": "https://spot.uz/en/2026/10/13/startups-announcements",
+          "publisher": "Spot.uz",
+          "date": "2026-10-13",
+          "kind": "funding",
+          "summary": "UrbanDrive, an online new-car buying and car-loan/leasing platform founded in 2025, raised $100,000 each from IT Park Ventures and Yoshlar Ventures.",
+          "amount_usd": 200000,
+          "co_investors": [
+            "IT Park Ventures"
+          ]
+        }
+      ],
+      "outlook": {
+        "likelihood": "medium",
+        "window": "H2 2027",
+        "rationale": "$200K from two institutional funds within a year of founding. Its transaction model (car loans and leasing) can show revenue quickly.",
+        "signals": [
+          "$200K (Sep 2026)",
+          "Two institutional funds"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "round-2026-09",
+          "source_url": "https://spot.uz/en/2026/10/13/startups-announcements",
+          "date": "2026-10-13",
+          "type": null,
+          "amount_usd": 200000,
+          "participants": [
+            {
+              "name": "IT Park Ventures",
+              "amount_usd": 100000,
+              "lead": false
+            },
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": 100000,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "TimePay",
+      "sector": "HR Tech",
+      "one_liner": "HRM for SMBs in Central Asia: Face ID attendance, payroll, KPIs",
+      "yv_check_usd": 165000,
+      "stage": null,
+      "metrics": [
+        {
+          "key": "customers",
+          "value": 800,
+          "unit": "count",
+          "period": "2026",
+          "source": "Company job posting on hh.ru (company claim, unverified)"
+        }
+      ],
+      "records": [
+        {
+          "title": "TimePay — Senior Product Manager job posting",
+          "url": "https://hh.ru/vacancy/138996366",
+          "publisher": "hh.ru",
+          "date": null,
+          "kind": "other",
+          "summary": "Company describes itself as a workforce-management platform used by about 800 companies in Central Asia (company claim).",
+          "amount_usd": null,
+          "co_investors": []
+        }
+      ],
+      "outlook": {
+        "likelihood": "medium",
+        "window": "H1–H2 2027",
+        "rationale": "YV's second-largest check and a claimed ~800 business customers, but no public funding coverage. Verify revenue; if confirmed, this is a strong seed candidate.",
+        "signals": [
+          "YV check $165K",
+          "~800 customers (company claim)",
+          "Hiring senior product roles"
+        ]
+      },
+      "rounds": []
+    },
+    {
+      "name": "Core AI",
+      "sector": "AI / SaaS",
+      "one_liner": "Local GPU and AI infrastructure and model services",
+      "yv_check_usd": 200000,
+      "stage": "seed",
+      "records": [
+        {
+          "title": "Uzbekistan's Core AI secures $800,000 in one of the country's largest startup rounds",
+          "url": "https://af.net/realtime/uzbekistans-core-ai-secures-800000-in-one-of-countrys-largest-startup-rounds/",
+          "publisher": "AF.net (citing Dealroom News)",
+          "date": "2026-10-29",
+          "kind": "funding",
+          "summary": "$800,000 seed round backed by Yoshlar Ventures, Aloqa Ventures, SQB Ventures and angels after graduating from UzCombinator's second cohort.",
+          "amount_usd": 800000,
+          "co_investors": [
+            "Aloqa Ventures",
+            "SQB Ventures",
+            "Angel investors"
+          ]
+        }
+      ],
+      "outlook": {
+        "likelihood": "medium",
+        "window": "2028 (Series A)",
+        "rationale": "Just closed one of Uzbekistan's largest seed rounds (Oct 2026). The next round is a Series A, typically 18–24 months later, so build international investor relationships early.",
+        "signals": [
+          "Seed $800K (Oct 2026)",
+          "UzCombinator graduate",
+          "Four investors"
+        ]
+      },
+      "rounds": [
+        {
+          "key": "seed-2026-10",
+          "source_url": "https://af.net/realtime/uzbekistans-core-ai-secures-800000-in-one-of-countrys-largest-startup-rounds/",
+          "date": "2026-10-29",
+          "type": "seed",
+          "amount_usd": 800000,
+          "participants": [
+            {
+              "name": "Yoshlar Ventures",
+              "amount_usd": null,
+              "lead": false
+            },
+            {
+              "name": "Aloqa Ventures",
+              "amount_usd": null,
+              "lead": false
+            },
+            {
+              "name": "SQB Ventures",
+              "amount_usd": null,
+              "lead": false
+            },
+            {
+              "name": "Angel investors",
+              "amount_usd": null,
+              "lead": false
+            }
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "name": "Mimoram AI",
+      "sector": "PropTech",
+      "one_liner": "AI 3D interior design linked to buyable products",
+      "yv_check_usd": 40000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Jilo AI",
+      "sector": "Media",
+      "one_liner": "AI video-editing automation",
+      "yv_check_usd": 40000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Binova",
+      "sector": "E-commerce",
+      "one_liner": "B2B construction-materials marketplace",
+      "yv_check_usd": 50000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "Hamroh IO",
+      "sector": "IoT",
+      "one_liner": "Desktop app plus compact display for productivity",
+      "yv_check_usd": 40000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    },
+    {
+      "name": "SpaceAgro",
+      "sector": "AgriTech",
+      "one_liner": "Soil tests turned into fertilizer recommendations",
+      "yv_check_usd": 40000,
+      "stage": null,
+      "records": [],
+      "outlook": {
+        "likelihood": "insufficient_data",
+        "window": null,
+        "rationale": "No public coverage beyond the YV listing.",
+        "signals": []
+      },
+      "rounds": []
+    }
+  ]
+}

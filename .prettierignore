@@ -1,0 +1,8 @@
+node_modules
+.next
+pnpm-lock.yaml
+src/lib/database.types.ts
+supabase/generated
+supabase/data
+docs
+AGENTS.md

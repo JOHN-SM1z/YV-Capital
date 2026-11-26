@@ -1,0 +1,1118 @@
+{
+ "_about": "International (non-Uzbek) capital providers with a public record of investing in Uzbek companies (evidence_type=investment) or a public partnership / stated interest in the Uzbek market. Compiled 2026-11-26. Each cited page was checked to load and name the investor. SECTORS, STAGES and the Central Asia flag are inferences from the cited deals and partnerships, not statements by the investor; confirm before relying on matching. Relationship status starts at 'identified' — no contact is implied.",
+ "retrieved": "2026-11-26",
+ "investors": [
+  {
+   "name": "Sturgeon Capital",
+   "category": "vc_fund",
+   "city": "London",
+   "country": "United Kingdom",
+   "sectors": [
+    "FinTech",
+    "AI / SaaS",
+    "AgriTech",
+    "HealthTech",
+    "EdTech"
+   ],
+   "stages": [
+    "seed",
+    "series_a"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Backed Uzbek startups ZoodPay, Billz, Arzon Apteka, Finmedia and TASS Vision; IFC committed $5M to its Central Asia fund.",
+   "url": "https://www.ifc.org/en/pressroom/2024/ifc-invests-in-new-sturgeon-capital-fund-to-support-tech-startups-across-central-asia",
+   "date": "2024-01-01",
+   "companies": [
+    "ZoodPay",
+    "Billz",
+    "Arzon Apteka",
+    "Finmedia",
+    "TASS Vision"
+   ],
+   "suggested_priority": true
+  },
+  {
+   "name": "500 Global",
+   "category": "vc_fund",
+   "city": "San Francisco",
+   "country": "United States",
+   "sectors": [],
+   "stages": [
+    "pre_seed",
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Invested at least $600K in Uzbek startups (TASS Vision, IMAN, Cerberus, Tezbor, Talklabs, Unitlab AI); met Uzbekistan's digital minister in Aug 2026.",
+   "url": "https://gov.uz/en/digital/news/view/211696",
+   "date": "2026-08-28",
+   "companies": [
+    "TASS Vision",
+    "IMAN",
+    "Cerberus",
+    "Tezbor",
+    "Talklabs",
+    "Unitlab AI"
+   ],
+   "suggested_priority": true
+  },
+  {
+   "name": "MOST Ventures",
+   "category": "vc_fund",
+   "city": "Almaty",
+   "country": "Kazakhstan",
+   "sectors": [
+    "AI / SaaS"
+   ],
+   "stages": [
+    "pre_seed",
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Took a stake in Uzbek B2B SaaS company Bito at a $10M valuation (Dec 2025), its first Uzbek portfolio company; signed an MoU with Yoshlar Ventures.",
+   "url": "https://timesca.com/kazakhstans-most-ventures-invests-in-uzbek-startup-bito-valuing-company-at-10-million/",
+   "date": "2025-12-25",
+   "companies": [
+    "Bito"
+   ],
+   "suggested_priority": true
+  },
+  {
+   "name": "Quest Ventures",
+   "category": "vc_fund",
+   "city": "Singapore",
+   "country": "Singapore",
+   "sectors": [
+    "AI / SaaS",
+    "E-commerce"
+   ],
+   "stages": [
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Invested in Uzbek retail-software company Billz (led a 2022 round, with Sturgeon Capital participating).",
+   "url": "https://about.crunchbase.com/blog/central-asia-global-tech-map",
+   "date": null,
+   "companies": [
+    "Billz"
+   ],
+   "suggested_priority": true
+  },
+  {
+   "name": "Plug and Play Tech Center",
+   "category": "other",
+   "city": "Sunnyvale",
+   "country": "United States",
+   "sectors": [],
+   "stages": [
+    "pre_seed",
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "First external investor in Uzbek startup Smartup (Aug 2026); runs Plug and Play Uzbekistan, a listed Yoshlar Ventures partner.",
+   "url": "https://www.spot.uz/en/2026/09/10/startups-investments/",
+   "date": "2026-09-10",
+   "companies": [
+    "Smartup"
+   ],
+   "suggested_priority": true
+  },
+  {
+   "name": "Cherry Ventures",
+   "category": "vc_fund",
+   "city": "Berlin",
+   "country": "Germany",
+   "sectors": [
+    "MarTech",
+    "AI / SaaS"
+   ],
+   "stages": [
+    "pre_seed",
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Invested $50K in Uzbek AI marketing platform ORA (Sep 2026) and joined Layf's $150K round with IT Park Ventures.",
+   "url": "https://spot.uz/en/2026/10/13/startups-announcements",
+   "date": "2026-09-22",
+   "companies": [
+    "ORA",
+    "Layf"
+   ],
+   "suggested_priority": true
+  },
+  {
+   "name": "Politecnico di Torino (Turin Polytechnic University)",
+   "category": "institutional",
+   "city": "Turin",
+   "country": "Italy",
+   "sectors": [
+    "Mobility"
+   ],
+   "stages": [
+    "pre_seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Co-invested $15K alongside Yoshlar Ventures in YV portfolio company DriveX (Aug 2026).",
+   "url": "https://www.spot.uz/en/2026/09/10/startups-investments/",
+   "date": "2026-09-10",
+   "companies": [
+    "DriveX"
+   ],
+   "suggested_priority": true
+  },
+  {
+   "name": "Purple Ventures",
+   "category": "vc_fund",
+   "city": "Prague",
+   "country": "Czech Republic",
+   "sectors": [
+    "Computer Vision",
+    "AI / SaaS"
+   ],
+   "stages": [
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Put €500K into Uzbek AI retail-analytics startup TASS Vision's €1.3M round, alongside IT Park Ventures.",
+   "url": "https://www.outsource.gov.uz/en/media/it-park-ventures-completes-its-first-investment-under-the-11-co-investment-mechanism-100000-in-tass-vision-as-part-of-a-13-million-funding-round",
+   "date": null,
+   "companies": [
+    "TASS Vision"
+   ],
+   "suggested_priority": true
+  },
+  {
+   "name": "White Hill Capital",
+   "category": "vc_fund",
+   "city": null,
+   "country": "Kazakhstan",
+   "sectors": [],
+   "stages": [
+    "pre_seed",
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Agreed with IT Park Ventures to launch a joint early-stage fund in Uzbekistan of up to $2M (Apr 2026).",
+   "url": "https://www.it-park.uz/index.php/en/itpark/news/it-park-ventures-and-white-hill-capital-launch-joint-venture-fund-in-uzbekistan",
+   "date": "2026-04-13",
+   "companies": [],
+   "suggested_priority": true
+  },
+  {
+   "name": "Big Sky Capital",
+   "category": "vc_fund",
+   "city": "Almaty",
+   "country": "Kazakhstan",
+   "sectors": [],
+   "stages": [
+    "seed",
+    "series_a"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Announced cooperation with UzVC and a cooperation and investment agreement with SQB Ventures (Apr 2026).",
+   "url": "https://gov.uz/en/imv/news/view/149093",
+   "date": "2026-04-01",
+   "companies": [],
+   "suggested_priority": true
+  },
+  {
+   "name": "Alchemist Accelerator",
+   "category": "other",
+   "city": "San Francisco",
+   "country": "United States",
+   "sectors": [
+    "AI / SaaS"
+   ],
+   "stages": [
+    "pre_seed",
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Signed an MoU with IT Park Ventures for joint evaluation and co-investment in Uzbek startups; runs AlchemistX with Uzbek cohorts (incl. YV portfolio companies Tilmoch and Camvi).",
+   "url": "https://outsource.gov.uz/en/media/alchemist-accelerator-and-it-park-uzbekistan-discuss-collaboration-for-the-2025-acceleration-program",
+   "date": null,
+   "companies": [
+    "Tilmoch-AI",
+    "Camvi"
+   ],
+   "suggested_priority": true
+  },
+  {
+   "name": "Y Combinator",
+   "category": "other",
+   "city": "San Francisco",
+   "country": "United States",
+   "sectors": [],
+   "stages": [
+    "pre_seed"
+   ],
+   "min": 500000,
+   "max": 500000,
+   "ca": false,
+   "evidence_type": "investment",
+   "evidence": "Backed Uzbek-founded Twolabs, Speko and Defex Robotics in 2026 batches (standard $500K deal reported).",
+   "url": "https://uzdaily.ru/en/sardor-rahmatulloev-becomes-first-uzbek-founder-accepted-into-y-combinator-2026-winter-program/",
+   "date": "2026-01-01",
+   "companies": [
+    "Twolabs",
+    "Speko",
+    "Defex Robotics"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Techstars",
+   "category": "other",
+   "city": "Boulder",
+   "country": "United States",
+   "sectors": [],
+   "stages": [
+    "pre_seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Uzbekistan became a Techstars Startup Community Partner with UzVC (Feb 2026); programs opened to Uzbek startups.",
+   "url": "https://www.techstars.com/blog/impact/techstars-welcomes-new-startup-community-partner-uzbekistan",
+   "date": "2026-02-01",
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "Golden Gate Ventures",
+   "category": "vc_fund",
+   "city": "Singapore",
+   "country": "Singapore",
+   "sectors": [],
+   "stages": [
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "stated_interest",
+   "evidence": "Announced a two-year program for Central Asian startups in Uzbekistan during ICT Week 2026 (Sep 22–25).",
+   "url": "https://timesca.com/golden-gate-ventures-plans-two-year-program-for-central-asian-startups-in-uzbekistan/",
+   "date": "2026-09-25",
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "Startup Wise Guys",
+   "category": "other",
+   "city": "Tallinn",
+   "country": "Estonia",
+   "sectors": [
+    "AI / SaaS"
+   ],
+   "stages": [
+    "pre_seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Invested in Tashkent-built Unitlab AI (about $210K together with 500 Global).",
+   "url": "https://www.it-park.uz/index.php/en/itpark/news/unitlab-how-a-team-from-tashkent-is-building-an-ai-business-for-the-u-s-market",
+   "date": null,
+   "companies": [
+    "Unitlab AI"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Startup Garage",
+   "category": "other",
+   "city": null,
+   "country": "Kazakhstan",
+   "sectors": [
+    "AI / SaaS"
+   ],
+   "stages": [
+    "pre_seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Early investor in Uzbek SaaS company Bito; partially exited in MOST Ventures' Dec 2025 round.",
+   "url": "https://www.uzdaily.uz/en/most-ventures-acquires-stake-in-uzbek-saas-startup-bito-valued-at-us10-million/",
+   "date": "2025-12-25",
+   "companies": [
+    "Bito"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Astana Hub",
+   "category": "other",
+   "city": "Astana",
+   "country": "Kazakhstan",
+   "sectors": [],
+   "stages": [
+    "pre_seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Runs the AlchemistX program with IT Park Uzbekistan and Silkroad Innovation Hub for Central Asian (incl. Uzbek) B2B startups.",
+   "url": "https://timesca.com/24-central-eurasian-startups-join-silicon-valley-programs/",
+   "date": null,
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "Silkroad Innovation Hub",
+   "category": "other",
+   "city": null,
+   "country": "United States",
+   "sectors": [],
+   "stages": [
+    "pre_seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Co-runs the AlchemistX Silicon Valley program with IT Park Uzbekistan and Astana Hub.",
+   "url": "https://timesca.com/24-central-eurasian-startups-join-silicon-valley-programs/",
+   "date": null,
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "Antler",
+   "category": "vc_fund",
+   "city": "Singapore",
+   "country": "Singapore",
+   "sectors": [],
+   "stages": [
+    "pre_seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Listed as a partner on the Yoshlar Ventures website.",
+   "url": "https://yoshlarventures.uz",
+   "date": "2026-11-26",
+   "companies": [],
+   "suggested_priority": true
+  },
+  {
+   "name": "Silkbridge Ventures",
+   "category": "vc_fund",
+   "city": null,
+   "country": null,
+   "sectors": [],
+   "stages": [],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Listed as a partner on the Yoshlar Ventures website.",
+   "url": "https://yoshlarventures.uz",
+   "date": "2026-11-26",
+   "companies": [],
+   "suggested_priority": true
+  },
+  {
+   "name": "Gobi Partners",
+   "category": "vc_fund",
+   "city": "Kuala Lumpur",
+   "country": "Malaysia",
+   "sectors": [],
+   "stages": [
+    "seed",
+    "series_a"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "stated_interest",
+   "evidence": "Named among the venture investors in the ICT Week Uzbekistan 2026 Startup & Venture Summit program (Sep 22–25).",
+   "url": "https://timesca.com/golden-gate-ventures-plans-two-year-program-for-central-asian-startups-in-uzbekistan/",
+   "date": "2026-09-25",
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "SparkLabs",
+   "category": "other",
+   "city": "Seoul",
+   "country": "South Korea",
+   "sectors": [],
+   "stages": [
+    "pre_seed",
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "stated_interest",
+   "evidence": "Named among the venture investors in the ICT Week Uzbekistan 2026 Startup & Venture Summit program (Sep 22–25).",
+   "url": "https://timesca.com/golden-gate-ventures-plans-two-year-program-for-central-asian-startups-in-uzbekistan/",
+   "date": "2026-09-25",
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "DOMiNO Ventures",
+   "category": "vc_fund",
+   "city": null,
+   "country": "Netherlands",
+   "sectors": [],
+   "stages": [
+    "seed",
+    "series_a"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "stated_interest",
+   "evidence": "Announced plans to invest $50M in startup development in Uzbekistan (Jul 2025).",
+   "url": "https://gov.uz/en/imv/news/view/113621",
+   "date": "2025-07-01",
+   "companies": [],
+   "suggested_priority": true
+  },
+  {
+   "name": "Link Ventures",
+   "category": "vc_fund",
+   "city": null,
+   "country": "United States",
+   "sectors": [
+    "IoT"
+   ],
+   "stages": [
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": false,
+   "evidence_type": "investment",
+   "evidence": "Participated in the ~$2.5M round of Uzbek-founded robotics startup Humanola (Nov 2025).",
+   "url": "https://tech.az/en/posts/uzbek-startups-receive-6-million-in-investment-6152",
+   "date": "2025-11-24",
+   "companies": [
+    "Humanola"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Bad Ideas Fund",
+   "category": "vc_fund",
+   "city": null,
+   "country": null,
+   "sectors": [
+    "IoT"
+   ],
+   "stages": [
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": false,
+   "evidence_type": "investment",
+   "evidence": "Participated in the ~$2.5M round of Uzbek-founded robotics startup Humanola (Nov 2025).",
+   "url": "https://tech.az/en/posts/uzbek-startups-receive-6-million-in-investment-6152",
+   "date": "2025-11-24",
+   "companies": [
+    "Humanola"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Georgia Tech Fund",
+   "category": "institutional",
+   "city": null,
+   "country": "United States",
+   "sectors": [
+    "IoT"
+   ],
+   "stages": [
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": false,
+   "evidence_type": "investment",
+   "evidence": "Participated in the ~$2.5M round of Uzbek-founded robotics startup Humanola (Nov 2025).",
+   "url": "https://tech.az/en/posts/uzbek-startups-receive-6-million-in-investment-6152",
+   "date": "2025-11-24",
+   "companies": [
+    "Humanola"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Tencent",
+   "category": "cvc",
+   "city": "Shenzhen",
+   "country": "China",
+   "sectors": [
+    "FinTech",
+    "E-commerce"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Co-led Uzum's ~$70M round at a $1.5B valuation (Aug 2025) and joined its 2026 round.",
+   "url": "https://techcrunch.com/2025/08/05/uzbekistans-first-unicorn-uzum-leaps-to-a-1-5b-valuation",
+   "date": "2025-08-05",
+   "companies": [
+    "Uzum"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "VR Capital Group",
+   "category": "vc_fund",
+   "city": "London",
+   "country": "United Kingdom",
+   "sectors": [
+    "FinTech",
+    "E-commerce"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Co-led Uzum's ~$70M round (Aug 2025) and participated in the $131.5M round (Mar 2026).",
+   "url": "https://techcrunch.com/2026/03/10/uzbekistans-uzum-valuation-rises-1.5x-in-seven-months-to-2-3b/",
+   "date": "2026-03-10",
+   "companies": [
+    "Uzum"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "FinSight Ventures",
+   "category": "vc_fund",
+   "city": "New York",
+   "country": "United States",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "series_a",
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Led Uzum's first equity round (Mar 2024) and joined its 2025 and 2026 rounds.",
+   "url": "https://news.bloomberglaw.com/private-equity/tencent-led-round-values-uzbek-fintech-uzum-at-1-5-billion",
+   "date": "2025-08-05",
+   "companies": [
+    "Uzum"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Zain Ventures",
+   "category": "cvc",
+   "city": null,
+   "country": "Kuwait",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "series_b"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Joined ZoodPay's $38M Series B; ZOOD runs digital lending in Uzbekistan.",
+   "url": "https://www.electronicpaymentsinternational.com/news/zoodpay-raises-38m-through-series-b-round-to-fund-growth-plans",
+   "date": null,
+   "companies": [
+    "ZoodPay"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "TBC Bank Group",
+   "category": "strategic",
+   "city": "London",
+   "country": "United Kingdom",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Owns 60% of TBC Bank Uzbekistan (Payme) and invested a further $37M in the unit (Dec 2024).",
+   "url": "https://techcrunch.com/?p=2934858",
+   "date": "2024-12-20",
+   "companies": [
+    "TBC Bank Uzbekistan",
+    "Payme"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Accial Capital",
+   "category": "institutional",
+   "city": null,
+   "country": "United States",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Provided a $20M debt investment to Alif for Shariah-compliant finance in Uzbekistan (Jan 2025).",
+   "url": "https://fintech.global/2025/01/02/alif-raises-20m-from-accial-capital-to-expand-shariah-compliant-finance/",
+   "date": "2025-01-02",
+   "companies": [
+    "Alif"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Cur8 Capital",
+   "category": "institutional",
+   "city": "London",
+   "country": "United Kingdom",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Signed a financing deal with Alif Uzbekistan (Oct 2024).",
+   "url": "https://www.spot.uz/oz/2024/10/21/alif-cur8/",
+   "date": "2024-10-21",
+   "companies": [
+    "Alif"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Ineco Group",
+   "category": "strategic",
+   "city": "Yerevan",
+   "country": "Armenia",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Provided $10M debt financing to expand Alif Nasiya installments in Uzbekistan.",
+   "url": "https://dealroom.co/news/146083-alif-secures-10m-debt-round-as-uzbekistan-tightens-bnpl-rules/",
+   "date": null,
+   "companies": [
+    "Alif"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "International Islamic Trade Finance Corporation (ITFC)",
+   "category": "dfi",
+   "city": "Jeddah",
+   "country": "Saudi Arabia",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Provided $3M to Alif to advance its Nasiya service in Uzbekistan (Jan 2025).",
+   "url": "https://kun.uz/en/news/2025/01/03/alif-secures-financing-from-the-international-islamic-trade-finance-corporation-to-advance-the-nasiya-service",
+   "date": "2025-01-03",
+   "companies": [
+    "Alif"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "European Bank for Reconstruction and Development (EBRD)",
+   "category": "dfi",
+   "city": "London",
+   "country": "United Kingdom",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Holds a 20% stake in TBC Bank Uzbekistan; co-financed the DataVolt data-center project in Uzbekistan.",
+   "url": "https://techcrunch.com/?p=2934858",
+   "date": "2024-12-20",
+   "companies": [
+    "TBC Bank Uzbekistan"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "International Finance Corporation (IFC)",
+   "category": "dfi",
+   "city": "Washington, D.C.",
+   "country": "United States",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Holds a 20% stake in TBC Bank Uzbekistan, lent $40M to Davr Bank (2025) and committed $5M to Sturgeon's Central Asia fund.",
+   "url": "https://www.ifc.org/en/pressroom/2025/ifc-and-davr-bank-partner-to-boost-financing-for-small-businesses-and-women-entrep",
+   "date": "2025-09-01",
+   "companies": [
+    "TBC Bank Uzbekistan",
+    "Davr Bank"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "FMO (Dutch Entrepreneurial Development Bank)",
+   "category": "dfi",
+   "city": "The Hague",
+   "country": "Netherlands",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Financing to Uzbek banks Ipak Yuli ($30M) and Davr Bank ($50M) in 2025, and the first international loan to TBC UZ.",
+   "url": "https://www.fmo.nl/project-detail/64523",
+   "date": "2025-03-01",
+   "companies": [
+    "Ipak Yuli Bank",
+    "Davr Bank",
+    "TBC UZ"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "OPEC Fund for International Development",
+   "category": "dfi",
+   "city": "Vienna",
+   "country": "Austria",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Extended a $35M loan to Asaka Bank for SME lending; over $725M approved for Uzbekistan to date.",
+   "url": "https://www.zawya.com/en/press-release/companies-news/opec-fund-provides-35mln-loan-to-asaka-bank-obng6jjl",
+   "date": null,
+   "companies": [
+    "Asaka Bank"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Proparco",
+   "category": "dfi",
+   "city": "Paris",
+   "country": "France",
+   "sectors": [],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Contributed $23M to a financing package of up to $150M for a sustainable data center in Uzbekistan (with EBRD, DEG, OPEC Fund).",
+   "url": "https://proparco.fr/en/news/uzbekistan-proparco-supports-digitalization-economy-through-financing-sustainable-data-center",
+   "date": null,
+   "companies": [
+    "DataVolt Uzbekistan"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "DEG – Deutsche Investitions- und Entwicklungsgesellschaft",
+   "category": "dfi",
+   "city": "Cologne",
+   "country": "Germany",
+   "sectors": [],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Co-financed the DataVolt sustainable data-center project in Uzbekistan alongside Proparco, EBRD and the OPEC Fund.",
+   "url": "https://proparco.fr/en/news/uzbekistan-proparco-supports-digitalization-economy-through-financing-sustainable-data-center",
+   "date": null,
+   "companies": [
+    "DataVolt Uzbekistan"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Eurasian Development Bank (EDB)",
+   "category": "dfi",
+   "city": "Almaty",
+   "country": "Kazakhstan",
+   "sectors": [
+    "E-commerce",
+    "FinTech"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Raised its financing for Uzum from $70M to $100M (Oct 2026); plans at least $500M of investment in Uzbekistan in 2027.",
+   "url": "https://timesca.com/edb-investment-in-uzbekistan/",
+   "date": "2026-11-25",
+   "companies": [
+    "Uzum"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Asian Development Bank (ADB)",
+   "category": "dfi",
+   "city": "Manila",
+   "country": "Philippines",
+   "sectors": [],
+   "stages": [],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "stated_interest",
+   "evidence": "Published a study of Uzbekistan's tech-startup ecosystem recommending more early-stage and private investment.",
+   "url": "https://www.adb.org/news/uzbekistan-tech-startups-need-additional-support",
+   "date": "2023-08-25",
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "Alem Capital",
+   "category": "fund_of_funds",
+   "city": "Astana",
+   "country": "Kazakhstan",
+   "sectors": [],
+   "stages": [],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Investor in Sturgeon's Central Asia venture fund; its venture fund agreed with UzVC to place capital with Big Sky Capital.",
+   "url": "https://thenextweb.com/news/kazakhstan-alem-capital-sturgeon-central-asia-venture-fund",
+   "date": null,
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "VentureRocket Eurasia",
+   "category": "other",
+   "city": null,
+   "country": "Kazakhstan",
+   "sectors": [
+    "AI / SaaS"
+   ],
+   "stages": [
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Supported Uzbek retail-software company Billz in raising $650K (AIFC announcement).",
+   "url": "https://aifc.kz/?p=18024",
+   "date": null,
+   "companies": [
+    "Billz"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "NVIDIA",
+   "category": "strategic",
+   "city": "Santa Clara",
+   "country": "United States",
+   "sectors": [
+    "AI / SaaS"
+   ],
+   "stages": [],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Partner in Uzbekistan's national AI initiative; listed as a Yoshlar Ventures partner.",
+   "url": "https://gov.uz/en/digital/news/view/100713",
+   "date": null,
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "Amazon Web Services (AWS Activate)",
+   "category": "strategic",
+   "city": "Seattle",
+   "country": "United States",
+   "sectors": [
+    "AI / SaaS"
+   ],
+   "stages": [
+    "pre_seed",
+    "seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "AWS Activate is listed as a Yoshlar Ventures partner; YV portfolio company The CarGo received AWS credits.",
+   "url": "https://yoshlarventures.uz",
+   "date": "2026-11-26",
+   "companies": [
+    "The CarGo"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Hult Prize Foundation",
+   "category": "other",
+   "city": "Boston",
+   "country": "United States",
+   "sectors": [],
+   "stages": [
+    "pre_seed"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Listed as a partner on the Yoshlar Ventures website.",
+   "url": "https://yoshlarventures.uz",
+   "date": "2026-11-26",
+   "companies": [],
+   "suggested_priority": false
+  },
+  {
+   "name": "DataVolt",
+   "category": "strategic",
+   "city": "Riyadh",
+   "country": "Saudi Arabia",
+   "sectors": [
+    "AI / SaaS"
+   ],
+   "stages": [
+    "growth"
+   ],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "investment",
+   "evidence": "Developing a sustainable data center in Uzbekistan backed by a financing package of up to $150M from Proparco, EBRD, DEG and the OPEC Fund.",
+   "url": "https://proparco.fr/en/news/uzbekistan-proparco-supports-digitalization-economy-through-financing-sustainable-data-center",
+   "date": null,
+   "companies": [
+    "DataVolt Uzbekistan"
+   ],
+   "suggested_priority": false
+  },
+  {
+   "name": "Mastercard",
+   "category": "strategic",
+   "city": "Purchase, NY",
+   "country": "United States",
+   "sectors": [
+    "FinTech"
+   ],
+   "stages": [],
+   "min": null,
+   "max": null,
+   "ca": true,
+   "evidence_type": "partnership",
+   "evidence": "Signed a collaboration with UZCARD to advance digital payments in Uzbekistan.",
+   "url": "https://api.uzcard.uz/en/?p=23066",
+   "date": null,
+   "companies": [
+    "UZCARD"
+   ],
+   "suggested_priority": false
+  }
+ ]
+}
