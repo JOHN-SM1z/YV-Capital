@@ -14,6 +14,120 @@ export type Database = {
   }
   public: {
     Tables: {
+      access_grants: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string | null
+          granted_by: string | null
+          id: string
+          is_org_admin: boolean
+          org_id: string
+          used_at: string | null
+          used_by: string | null
+          user_type: Database["public"]["Enums"]["user_type"]
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name?: string | null
+          granted_by?: string | null
+          id?: string
+          is_org_admin?: boolean
+          org_id: string
+          used_at?: string | null
+          used_by?: string | null
+          user_type: Database["public"]["Enums"]["user_type"]
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string | null
+          granted_by?: string | null
+          id?: string
+          is_org_admin?: boolean
+          org_id?: string
+          used_at?: string | null
+          used_by?: string | null
+          user_type?: Database["public"]["Enums"]["user_type"]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "access_grants_granted_by_fkey"
+            columns: ["granted_by"]
+            isOneToOne: false
+            referencedRelation: "user_profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "access_grants_org_id_fkey"
+            columns: ["org_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "access_grants_used_by_fkey"
+            columns: ["used_by"]
+            isOneToOne: false
+            referencedRelation: "user_profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      access_requests: {
+        Row: {
+          created_at: string
+          decided_at: string | null
+          decided_by: string | null
+          email: string
+          full_name: string
+          message: string | null
+          organization_name: string | null
+          provider: string | null
+          requested_role: string | null
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          decided_at?: string | null
+          decided_by?: string | null
+          email: string
+          full_name?: string
+          message?: string | null
+          organization_name?: string | null
+          provider?: string | null
+          requested_role?: string | null
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          decided_at?: string | null
+          decided_by?: string | null
+          email?: string
+          full_name?: string
+          message?: string | null
+          organization_name?: string | null
+          provider?: string | null
+          requested_role?: string | null
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "access_requests_decided_by_fkey"
+            columns: ["decided_by"]
+            isOneToOne: false
+            referencedRelation: "user_profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       audit_logs: {
         Row: {
           action: string
@@ -2091,7 +2205,17 @@ export type Database = {
       }
     }
     Functions: {
+      approve_access_request: {
+        Args: {
+          p_org: string
+          p_org_admin: boolean
+          p_type: Database["public"]["Enums"]["user_type"]
+          p_user: string
+        }
+        Returns: boolean
+      }
       can_access_document: { Args: { p_document: string }; Returns: boolean }
+      decline_access_request: { Args: { p_user: string }; Returns: boolean }
       document_storage_path: { Args: { p_document: string }; Returns: string }
       investor_opportunity_documents: {
         Args: { p_opportunity: string }
@@ -2151,6 +2275,15 @@ export type Database = {
           team_size: number
           website: string
         }[]
+      }
+      submit_access_request: {
+        Args: {
+          p_full_name: string
+          p_message: string
+          p_organization: string
+          p_role: string
+        }
+        Returns: boolean
       }
       whoami: {
         Args: never

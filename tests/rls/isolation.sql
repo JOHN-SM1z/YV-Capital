@@ -228,6 +228,80 @@ select pg_temp.expect('admin_reads_audit_log', 1, case when count(*) > 0 then 1 
 select pg_temp.expect_error('nobody_can_share_before_approval', format($q$update public.investment_opportunities set status = 'shared' where id = %L$q$, pg_temp.id('opp_review')));
 reset role;
 
+-- ───────────── self sign-up and pre-approvals ─────────────
+create or replace function pg_temp.new_auth_user(p_email text, p_confirmed boolean, p_meta jsonb default '{}') returns uuid language plpgsql as $$
+declare uid uuid := gen_random_uuid();
+begin
+  insert into auth.users (instance_id, id, aud, role, email, email_confirmed_at, raw_app_meta_data, raw_user_meta_data,
+    created_at, updated_at, confirmation_token, email_change, email_change_token_new, recovery_token)
+  values ('00000000-0000-0000-0000-000000000000', uid, 'authenticated', 'authenticated', p_email,
+    case when p_confirmed then now() end, '{"provider":"email","providers":["email"]}', p_meta, now(), now(), '', '', '', '');
+  return uid;
+end $$;
+
+-- Pre-approvals made by an admin before the accounts exist.
+insert into public.access_grants (email, org_id, user_type) values
+  ('rls-granted@example.com', '00000000-0000-4000-8000-000000000001', 'yv_team'),
+  ('rls-unconfirmed@example.com', pg_temp.id('org_inv_a'), 'investor');
+insert into ids values
+  ('u_pending', pg_temp.new_auth_user('rls-pending@example.com', true, '{"full_name":"RLS Pending","requested_role":"yv","organization_name":"Fake YV"}')),
+  ('u_granted', pg_temp.new_auth_user('rls-granted@example.com', true)),
+  ('u_unconfirmed', pg_temp.new_auth_user('rls-unconfirmed@example.com', false));
+
+select pg_temp.expect('signup_without_grant_gets_no_profile', 0, count(*)) from public.user_profiles where id = pg_temp.id('u_pending');
+select pg_temp.expect('signup_without_grant_creates_pending_request', 1, count(*)) from public.access_requests where user_id = pg_temp.id('u_pending') and status = 'pending';
+select pg_temp.expect('signup_metadata_never_grants_staff_role', 0, count(*)) from public.user_profiles where id = pg_temp.id('u_pending') and user_type in ('yv_admin','yv_team');
+select pg_temp.expect('admins_notified_of_access_request', 1, case when count(*) > 0 then 1 else 0 end) from public.notifications where kind = 'access_requested' and params->>'org' = 'RLS Pending';
+select pg_temp.expect('confirmed_email_with_grant_is_provisioned', 1, count(*)) from public.user_profiles where id = pg_temp.id('u_granted') and user_type = 'yv_team';
+select pg_temp.expect('grant_is_marked_used', 1, count(*)) from public.access_grants where email = 'rls-granted@example.com' and used_by = pg_temp.id('u_granted');
+select pg_temp.expect('unconfirmed_email_with_grant_gets_nothing', 0, count(*)) from public.user_profiles where id = pg_temp.id('u_unconfirmed');
+
+select pg_temp.as_user('rls-pending@example.com');
+select pg_temp.expect('pending_user_has_no_session_membership', 0, count(*)) from public.whoami();
+select pg_temp.expect('pending_user_reads_own_request', 1, count(*)) from public.access_requests;
+select pg_temp.expect('pending_user_reads_no_grants', 0, count(*)) from public.access_grants;
+select pg_temp.expect('pending_user_reads_no_portfolio', 0, count(*)) from public.portfolio_directory();
+select pg_temp.expect('pending_user_reads_no_records', 0, count(*)) from public.startup_public_records;
+select pg_temp.expect('pending_user_can_update_own_request', 1, count(*)) from public.submit_access_request('investor', 'RLS Fund', 'hello', 'RLS Pending');
+select pg_temp.expect_error('pending_user_cannot_approve_self',
+  format($q$select public.approve_access_request(%L, '00000000-0000-4000-8000-000000000001', 'yv_admin', true)$q$, pg_temp.id('u_pending')));
+select pg_temp.expect_error('pending_user_cannot_edit_request_directly', $q$update public.access_requests set status = 'approved'$q$);
+select pg_temp.expect_error('pending_user_cannot_grant_self',
+  $q$insert into public.access_grants (email, org_id, user_type, granted_by) values ('rls-pending@example.com', '00000000-0000-4000-8000-000000000001', 'yv_admin', auth.uid())$q$);
+reset role;
+
+select pg_temp.as_user('investor.a@demo.test');
+select pg_temp.expect('investor_cannot_read_access_requests', 0, count(*)) from public.access_requests;
+select pg_temp.expect('investor_cannot_read_access_grants', 0, count(*)) from public.access_grants;
+select pg_temp.expect_error('investor_cannot_approve_access',
+  format($q$select public.approve_access_request(%L, %L, 'investor', false)$q$, pg_temp.id('u_pending'), pg_temp.id('org_inv_a')));
+reset role;
+
+select pg_temp.as_user('team@yv.demo');
+select pg_temp.expect('team_cannot_read_access_requests', 0, count(*)) from public.access_requests;
+select pg_temp.expect_error('team_cannot_approve_access',
+  format($q$select public.approve_access_request(%L, %L, 'investor', false)$q$, pg_temp.id('u_pending'), pg_temp.id('org_inv_a')));
+select pg_temp.expect_error('team_cannot_add_grant',
+  format($q$insert into public.access_grants (email, org_id, user_type, granted_by) values ('x@example.com', %L, 'investor', auth.uid())$q$, pg_temp.id('org_inv_a')));
+reset role;
+
+select pg_temp.as_user('admin@yv.demo');
+select pg_temp.expect('admin_reads_access_requests', 1, case when count(*) >= 1 then 1 else 0 end) from public.access_requests where user_id = pg_temp.id('u_pending');
+select pg_temp.expect_error('grant_role_must_fit_org',
+  $q$insert into public.access_grants (email, org_id, user_type, granted_by) values ('y@example.com', '00000000-0000-4000-8000-000000000001', 'investor', auth.uid())$q$);
+select pg_temp.expect_error('approval_role_must_fit_org',
+  format($q$select public.approve_access_request(%L, '00000000-0000-4000-8000-000000000001', 'founder', false)$q$, pg_temp.id('u_pending')));
+select pg_temp.expect('admin_approves_request', 1, count(*)) from public.approve_access_request(pg_temp.id('u_pending'), pg_temp.id('org_inv_a'), 'investor', false) where approve_access_request;
+reset role;
+
+select pg_temp.as_user('rls-pending@example.com');
+select pg_temp.expect('approved_user_gets_assigned_role', 1, count(*)) from public.whoami() where user_type = 'investor' and org_id = pg_temp.id('org_inv_a');
+reset role;
+
+-- Confirming the email later applies the waiting pre-approval.
+update auth.users set email_confirmed_at = now() where id = pg_temp.id('u_unconfirmed');
+select pg_temp.expect('grant_applies_when_email_confirmed', 1, count(*)) from public.user_profiles where id = pg_temp.id('u_unconfirmed') and user_type = 'investor';
+
 -- ───────────── signed out ─────────────
 set local role anon;
 select pg_temp.expect_error('anon_cannot_list_portfolio', 'select * from public.portfolio_directory()');
@@ -235,6 +309,8 @@ select pg_temp.expect_error('anon_cannot_read_investors', 'select * from public.
 select pg_temp.expect_error('anon_cannot_read_public_records_table', 'select * from public.startup_public_records');
 select pg_temp.expect_error('anon_cannot_read_funding_rounds', 'select * from public.funding_rounds');
 select pg_temp.expect_error('anon_cannot_read_follows', 'select * from public.company_follows');
+select pg_temp.expect_error('anon_cannot_read_access_requests', 'select * from public.access_requests');
+select pg_temp.expect_error('anon_cannot_submit_access_request', $q$select public.submit_access_request('investor', 'x', 'x', 'x')$q$);
 reset role;
 
 -- ───────────── deactivated member ─────────────

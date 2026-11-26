@@ -8,6 +8,7 @@ import { isKeyOf } from "@/lib/labels";
 import { date } from "@/lib/format";
 import { rows } from "@/lib/db";
 import { getI18n } from "@/i18n/server";
+import { AccessGrantsCard, AccessRequestsCard } from "@/components/access-admin";
 
 export async function generateMetadata() {
   return { title: (await getI18n()).t.nav.team };
@@ -20,19 +21,27 @@ export default async function TeamPage() {
   const supabase = await createClient();
   const { t, locale } = await getI18n();
   const x = t.team;
-  const [membersRes, targetsRes, staff] = await Promise.all([
+  const [membersRes, targetsRes, staff, requestsRes, grantsRes, orgsRes] = await Promise.all([
     supabase
       .from("organization_members")
       .select("id, is_active, is_org_admin, created_at, user_id, organizations(name, type), user_profiles(full_name, email, user_type)")
       .order("created_at", { ascending: false }),
     supabase.from("program_kpi_targets").select("*").order("sort_order"),
     getStaff(supabase),
+    supabase.from("access_requests").select("*").eq("status", "pending").order("created_at", { ascending: false }),
+    supabase.from("access_grants").select("*, organizations(name)").order("created_at", { ascending: false }).limit(50),
+    supabase.from("organizations").select("id, name, type, is_demo").is("deleted_at", null).order("name"),
   ]);
+  const orgs = rows(orgsRes, "organizations");
   const invitesConnected = !!process.env.SUPABASE_SECRET_KEY;
 
   return (
     <>
       <PageHeader title={x.title} description={x.subtitle} />
+
+      <div className="mb-6">
+        <AccessRequestsCard requests={rows(requestsRes, "access requests")} orgs={orgs} t={t} locale={locale} />
+      </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
         <Card className="lg:col-span-2">
@@ -86,6 +95,7 @@ export default async function TeamPage() {
         </Card>
 
         <div className="space-y-6">
+          <AccessGrantsCard grants={rows(grantsRes, "access grants")} orgs={orgs} t={t} locale={locale} />
           <Card>
             <CardHeader title={x.inviteStaff} description={x.inviteStaffSub} />
             <CardBody>

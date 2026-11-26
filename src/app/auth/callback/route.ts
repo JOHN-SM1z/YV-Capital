@@ -4,7 +4,7 @@ import { safeRelativePath } from "@/lib/safe-path";
 
 const OTP_TYPES = ["signup", "invite", "magiclink", "recovery", "email_change", "email"] as const;
 
-/** Completes magic-link, invitation and recovery sign-ins. */
+/** Completes Google/Apple/Microsoft, sign-up confirmation, magic-link, invitation and recovery sign-ins. */
 export async function GET(request: NextRequest) {
   const url = request.nextUrl;
   const code = url.searchParams.get("code");
@@ -20,7 +20,8 @@ export async function GET(request: NextRequest) {
   } else if (tokenHash && type) {
     failed = !!(await supabase.auth.verifyOtp({ token_hash: tokenHash, type })).error;
   }
-  if (failed) return NextResponse.redirect(new URL("/login?error=link", url.origin));
+  // Google/Apple/Microsoft report a refused or failed sign-in with an `error` parameter.
+  if (failed) return NextResponse.redirect(new URL(url.searchParams.has("error") ? "/login?error=provider" : "/login?error=link", url.origin));
 
   const dest = type === "invite" || type === "recovery" ? "/auth/set-password" : next;
   return NextResponse.redirect(new URL(dest, url.origin));

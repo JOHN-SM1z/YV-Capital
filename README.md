@@ -1,12 +1,16 @@
 # YV Capital Partnerships Platform
 
-A private, invitation-only platform where Yoshlar Ventures (YV) runs its international capital partnerships, and where investors and founders work with YV in separate portals. Available in **Uzbek, Russian and English**.
+A private platform where Yoshlar Ventures (YV) runs its international capital partnerships, and where investors and founders work with YV in separate portals. Available in **Uzbek, Russian and English**.
 
 - **YV workspace (`/admin`):** a personal desk for each staff member, 180-day targets, the portfolio with public records and sourced funding rounds, next-round outlook, insights (co-investors, funding by month and sector, investor attention), search, CSV export, investors with their Uzbekistan evidence, matching, opportunities (approve, then share with chosen investors), diligence Q&A, meetings and follow-ups, team access, activity log.
 - **Investor portal (`/investor`):** opportunities shared with that organization, the YV portfolio with every public record and funding round per company, follow a company to get alerts on new records and rounds, questions, non-binding interest, meeting requests, preferences and team.
 - **Founder portal (`/startup`):** company profile, versioned metrics and fundraising, documents, requests from YV, readiness checklist, public records about the company, meetings.
 
 Design: [`docs/superpowers/specs/2026-11-26-yv-platform-lean-core-design.md`](docs/superpowers/specs/2026-11-26-yv-platform-lean-core-design.md) · Engineering report: [`docs/engineering-report-2026-11-26.md`](docs/engineering-report-2026-11-26.md) · What we took from Crunchbase: [`docs/crunchbase-analysis-2026-11-26.md`](docs/crunchbase-analysis-2026-11-26.md)
+
+## Sign-in and sign-up
+
+Email and password, email sign-in links, Google, Apple and Microsoft. Anyone can sign up, but a new account sees nothing until a YV admin approves it under **Team & access → Access requests**, or until its verified email matches a pre-approval. Provider and email setup: [`docs/auth-setup.md`](docs/auth-setup.md).
 
 ## Stack
 
@@ -79,6 +83,7 @@ Sources are in `supabase/data/`, compiled 26 November 2026.
 - Follows are private to the person following. YV staff can see them as an internal interest signal (the investor screen says so); founders and other investors never can. Investors can follow portfolio companies only.
 - CSV export is staff-only, contains no internal notes or outlooks, and every export is written to the audit log.
 - Documents are authorized per file; downloads are logged and use 60-second signed URLs. Uploads are re-validated on the server by file signature.
+- Signing up gives no access. Accounts stay pending until an admin approves them, or until a confirmed email matches an admin's pre-approval. Sign-up metadata such as "I am YV staff" never grants anything.
 - Redirect targets are validated as same-site paths.
 - The Supabase advisor lists the `security definer` RPCs in `public`. This is intentional: each checks authorization inside, and signed-out users can't execute them.
 
@@ -89,5 +94,5 @@ Co-investment syndication workspace, institutional partnerships pipeline, memo g
 ## Before production
 
 - Set `SUPABASE_SECRET_KEY` and `NEXT_PUBLIC_SITE_URL` in hosting.
-- In Supabase Auth: enable leaked-password protection and MFA, and configure a custom SMTP sender.
+- In Supabase Auth: set the Site URL and redirect URLs, switch on Google, Apple and Microsoft, configure a custom SMTP sender, and enable leaked-password protection, CAPTCHA and MFA (see `docs/auth-setup.md`).
 - Remove the test logins and sandbox organizations.
