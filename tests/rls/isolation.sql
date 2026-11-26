@@ -5,8 +5,8 @@
 -- leaves no data behind. Each check impersonates a test login through request.jwt.claims + the
 -- "authenticated" role. The final SELECT lists every check; all rows must have pass = true.
 --
--- Requires the test logins from seed-users.template.sql: investor.a/b are in two investor
--- organizations, founder.a/b in two portfolio companies.
+-- Self-contained: it creates its own temporary users (staff, two investor organizations, founders
+-- of two temporary portfolio companies) and needs no test accounts in the database.
 
 begin;
 
@@ -42,11 +42,46 @@ exception when others then
 end $$;
 
 -- ───────────── fixtures ─────────────
-insert into ids
-select 'org_inv_a', m.org_id from public.organization_members m join auth.users u on u.id = m.user_id where u.email = 'investor.a@demo.test'
-union all select 'org_inv_b', m.org_id from public.organization_members m join auth.users u on u.id = m.user_id where u.email = 'investor.b@demo.test'
-union all select 'startup_a', s.id from public.startups s join public.organization_members m on m.org_id = s.org_id join auth.users u on u.id = m.user_id where u.email = 'founder.a@demo.test'
-union all select 'startup_b', s.id from public.startups s join public.organization_members m on m.org_id = s.org_id join auth.users u on u.id = m.user_id where u.email = 'founder.b@demo.test';
+create or replace function pg_temp.new_auth_user(p_email text, p_confirmed boolean, p_meta jsonb default '{}') returns uuid language plpgsql as $$
+declare uid uuid := gen_random_uuid();
+begin
+  insert into auth.users (instance_id, id, aud, role, email, email_confirmed_at, raw_app_meta_data, raw_user_meta_data,
+    created_at, updated_at, confirmation_token, email_change, email_change_token_new, recovery_token)
+  values ('00000000-0000-0000-0000-000000000000', uid, 'authenticated', 'authenticated', p_email,
+    case when p_confirmed then now() end, '{"provider":"email","providers":["email"]}', p_meta, now(), now(), '', '', '', '');
+  return uid;
+end $$;
+
+-- Temporary people and organizations (rolled back with everything else).
+create or replace function pg_temp.fixture_user(p_email text, p_type public.user_type, p_org uuid, p_org_admin boolean) returns uuid language plpgsql as $$
+declare uid uuid := pg_temp.new_auth_user(p_email, false);
+begin
+  insert into public.user_profiles (id, email, full_name, user_type) values (uid, p_email, p_email, p_type);
+  insert into public.organization_members (org_id, user_id, is_org_admin) values (p_org, uid, p_org_admin);
+  return uid;
+end $$;
+
+insert into ids values
+  ('org_inv_a', gen_random_uuid()), ('org_inv_b', gen_random_uuid()),
+  ('org_st_a', gen_random_uuid()), ('org_st_b', gen_random_uuid()),
+  ('startup_a', gen_random_uuid()), ('startup_b', gen_random_uuid());
+insert into public.organizations (id, type, name, is_demo) values
+  (pg_temp.id('org_inv_a'), 'investor', 'RLS test investor A', true),
+  (pg_temp.id('org_inv_b'), 'investor', 'RLS test investor B', true),
+  (pg_temp.id('org_st_a'), 'startup', 'RLS test portfolio company A', true),
+  (pg_temp.id('org_st_b'), 'startup', 'RLS test portfolio company B', true);
+insert into public.investors (org_id) values (pg_temp.id('org_inv_a')), (pg_temp.id('org_inv_b'));
+insert into public.startups (id, org_id, name, is_portfolio) values
+  (pg_temp.id('startup_a'), pg_temp.id('org_st_a'), 'RLS test portfolio company A', true),
+  (pg_temp.id('startup_b'), pg_temp.id('org_st_b'), 'RLS test portfolio company B', true);
+insert into public.startup_public_records (startup_id, title, url, publisher, kind, summary) values
+  (pg_temp.id('startup_a'), 'RLS fixture record', 'https://example.com/rls-fixture-a', 'Test', 'news', 'Fixture');
+select pg_temp.fixture_user('admin@yv.demo', 'yv_admin', '00000000-0000-4000-8000-000000000001', true);
+select pg_temp.fixture_user('team@yv.demo', 'yv_team', '00000000-0000-4000-8000-000000000001', false);
+select pg_temp.fixture_user('investor.a@demo.test', 'investor', pg_temp.id('org_inv_a'), true);
+select pg_temp.fixture_user('investor.b@demo.test', 'investor', pg_temp.id('org_inv_b'), true);
+select pg_temp.fixture_user('founder.a@demo.test', 'founder', pg_temp.id('org_st_a'), true);
+select pg_temp.fixture_user('founder.b@demo.test', 'founder', pg_temp.id('org_st_b'), true);
 
 insert into ids values
   ('opp_a', gen_random_uuid()), ('opp_b', gen_random_uuid()), ('opp_review', gen_random_uuid()),
@@ -229,15 +264,7 @@ select pg_temp.expect_error('nobody_can_share_before_approval', format($q$update
 reset role;
 
 -- ───────────── self sign-up and pre-approvals ─────────────
-create or replace function pg_temp.new_auth_user(p_email text, p_confirmed boolean, p_meta jsonb default '{}') returns uuid language plpgsql as $$
-declare uid uuid := gen_random_uuid();
-begin
-  insert into auth.users (instance_id, id, aud, role, email, email_confirmed_at, raw_app_meta_data, raw_user_meta_data,
-    created_at, updated_at, confirmation_token, email_change, email_change_token_new, recovery_token)
-  values ('00000000-0000-0000-0000-000000000000', uid, 'authenticated', 'authenticated', p_email,
-    case when p_confirmed then now() end, '{"provider":"email","providers":["email"]}', p_meta, now(), now(), '', '', '', '');
-  return uid;
-end $$;
+
 
 -- Pre-approvals made by an admin before the accounts exist.
 insert into public.access_grants (email, org_id, user_type) values

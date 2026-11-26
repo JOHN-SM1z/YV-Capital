@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { requireUser, STAFF } from "@/lib/auth";
-import { Badge, ButtonLink, Card, EmptyState, Input, PageHeader, SandboxBadge, Select, Table, Td, Th, buttonClass } from "@/components/ui";
+import { Badge, ButtonLink, Card, EmptyState, Input, PageHeader, Select, Table, Td, Th, buttonClass } from "@/components/ui";
 import { EVIDENCE_TONE, FUNDING_STAGES, RELATIONSHIP_TONE, SECTORS, isEvidenceType, isRoundType } from "@/lib/labels";
 import { date, todayTashkent, usdRange } from "@/lib/format";
 import { rows } from "@/lib/db";
@@ -169,7 +169,6 @@ export default async function InvestorsPage({ searchParams }: PageProps<"/admin/
                         <span>{[org.country, t.enums.investor_category[r.category]].filter(Boolean).join(" · ")}</span>
                         {rel?.priority === "high" && <Badge tone="brand">{t.investors.priorityBadge}</Badge>}
                         {rel?.tags.includes("suggested-priority") && <Badge tone="info">{t.investors.suggested}</Badge>}
-                        {org.is_demo && <SandboxBadge label={t.common.sandbox} />}
                       </div>
                     </Td>
                     <Td className="max-w-56">

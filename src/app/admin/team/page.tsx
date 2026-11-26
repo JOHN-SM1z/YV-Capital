@@ -30,7 +30,7 @@ export default async function TeamPage() {
     getStaff(supabase),
     supabase.from("access_requests").select("*").eq("status", "pending").order("created_at", { ascending: false }),
     supabase.from("access_grants").select("*, organizations(name)").order("created_at", { ascending: false }).limit(50),
-    supabase.from("organizations").select("id, name, type, is_demo").is("deleted_at", null).order("name"),
+    supabase.from("organizations").select("id, name, type").is("deleted_at", null).order("name"),
   ]);
   const orgs = rows(orgsRes, "organizations");
   const invitesConnected = !!process.env.SUPABASE_SECRET_KEY;

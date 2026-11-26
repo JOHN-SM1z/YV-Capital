@@ -370,6 +370,6 @@ export async function saveOutlook(_: ActionState, fd: FormData): Promise<ActionS
     .upsert({ ...parsed.data, signals, assessed_by: user.id, assessed_at: new Date().toISOString() });
   if (error) return dbError(t, error);
   revalidatePath(`/admin/startups/${parsed.data.startup_id}`);
-  revalidatePath("/admin/next-rounds");
+  revalidatePath("/admin/startups");
   return ok(t.msg.outlookSaved);
 }

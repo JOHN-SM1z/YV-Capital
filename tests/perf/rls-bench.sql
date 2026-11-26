@@ -11,6 +11,21 @@ select s.id, 'Bench ' || g, 'https://bench.invalid/' || s.id || '/' || g, 'Bench
 from (select id from public.startups where is_portfolio and deleted_at is null order by name limit 20) s, generate_series(1, 1000) g;
 analyze public.startup_public_records;
 
+-- Temporary investor and staff users (rolled back), so the benchmark needs no test accounts.
+create or replace function pg_temp.bench_user(p_email text, p_type public.user_type, p_org uuid) returns void language plpgsql as $$
+declare uid uuid := gen_random_uuid();
+begin
+  insert into auth.users (instance_id, id, aud, role, email, raw_app_meta_data, raw_user_meta_data, created_at, updated_at,
+    confirmation_token, email_change, email_change_token_new, recovery_token)
+  values ('00000000-0000-0000-0000-000000000000', uid, 'authenticated', 'authenticated', p_email,
+    '{"provider":"email","providers":["email"]}', '{}', now(), now(), '', '', '', '');
+  insert into public.user_profiles (id, email, full_name, user_type) values (uid, p_email, p_email, p_type);
+  insert into public.organization_members (org_id, user_id) values (p_org, uid);
+end $$;
+with org as (insert into public.organizations (type, name, is_demo) values ('investor', 'Bench investor', true) returning id)
+select pg_temp.bench_user('bench.investor@example.com', 'investor', (select id from org));
+select pg_temp.bench_user('bench.staff@example.com', 'yv_team', '00000000-0000-4000-8000-000000000001');
+
 create or replace function pg_temp.measure(p_who text, p_name text, p_sql text) returns void language plpgsql as $$
 declare plan json; total numeric := 0; n bigint;
 begin
@@ -35,8 +50,8 @@ begin
   perform pg_temp.measure(p_who, 'organizations list', 'select id from public.organizations');
 end $$;
 
-select pg_temp.run_as('investor.a@demo.test', 'investor');
-select pg_temp.run_as('team@yv.demo', 'staff');
+select pg_temp.run_as('bench.investor@example.com', 'investor');
+select pg_temp.run_as('bench.staff@example.com', 'staff');
 reset role;
 
 select * from bench order by who, query;

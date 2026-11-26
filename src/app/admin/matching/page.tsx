@@ -4,7 +4,7 @@ import { requireUser, STAFF } from "@/lib/auth";
 import { getInvestorsForMatch, getStartupsForMatch, realInvestors } from "@/lib/data";
 import { rankInvestors, rankStartups, WEIGHTS } from "@/lib/matching/score";
 import { FitBadge, MatchReasons } from "@/components/match-list";
-import { Card, CardHeader, EmptyState, PageHeader, SandboxBadge, Select, Table, Td, Th, buttonClass } from "@/components/ui";
+import { Card, CardHeader, EmptyState, PageHeader, Select, Table, Td, Th, buttonClass } from "@/components/ui";
 import { usdRange } from "@/lib/format";
 import { isRoundType } from "@/lib/labels";
 import { getI18n } from "@/i18n/server";
@@ -36,7 +36,6 @@ export default async function MatchingPage({ searchParams }: PageProps<"/admin/m
   const visible = showNoFit ? results : results.filter((r) => r.fit !== "none");
   const hidden = results.length - visible.length;
   const selected = startup ?? investor;
-  const sandbox = new Set(investors.filter((i) => i.isDemo).map((i) => i.id));
   const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name);
   const stageText = startup?.fundingStage && isRoundType(startup.fundingStage) ? t.enums.funding_stage[startup.fundingStage] : m.stageNotSet;
 
@@ -117,7 +116,6 @@ export default async function MatchingPage({ searchParams }: PageProps<"/admin/m
                       </Link>
                       <div className="mt-1 flex gap-1.5">
                         <FitBadge fit={r.fit} />
-                        {sandbox.has(r.id) && <SandboxBadge label={t.common.sandbox} />}
                       </div>
                     </Td>
                     <Td>

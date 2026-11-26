@@ -12,6 +12,10 @@ Design: [`docs/superpowers/specs/2026-11-26-yv-platform-lean-core-design.md`](do
 
 Email and password, email sign-in links, Google, Apple and Microsoft. Anyone can sign up, but a new account sees nothing until a YV admin approves it under **Team & access → Access requests**, or until its verified email matches a pre-approval. Provider and email setup: [`docs/auth-setup.md`](docs/auth-setup.md).
 
+## Live deployment
+
+**https://yv-capital.vercel.app** (Vercel project `handly/yv-capital`, functions in Frankfurt, next to the database). Deploy with `vercel deploy --prod`; the project is not connected to GitHub, so pushes don't deploy on their own. `.vercelignore` keeps env files, database scripts and docs out of the upload.
+
 ## Stack
 
 - Next.js 16 (App Router, strict TypeScript), Tailwind 4, Recharts, zod.
@@ -38,29 +42,22 @@ Environment (`.env.local`, never committed; template in `.env.example`):
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Publishable (browser-safe) key                                                             |
 | `SUPABASE_SECRET_KEY`                  | **Server only.** Needed to send invitations. Without it, invite forms say "not connected". |
 | `NEXT_PUBLIC_SITE_URL`                 | Public URL used in invitation and sign-in emails. Set it in production.                    |
-| `DEMO_PASSWORD`                        | Password of the test logins                                                                |
 
 ## Setting up a new database
 
 1. Apply `supabase/migrations/*.sql` in filename order.
-2. `supabase/seed.sql` (organizations, portfolio names, KPI targets, demo records).
-3. `supabase/seed-users.template.sql` with the password placeholder replaced (never commit the value).
-4. `supabase/remove-demo-data.sql` (removes the fictional records, keeps two sandbox investors, links the founder test logins).
-5. `pnpm data:sql`, then run `supabase/generated/real-data.sql`. Safe to re-run: it does not delete user-created rows or overwrite edited profiles, preferences or staff outlooks.
+2. `supabase/seed.sql` (the YV organization, portfolio names, KPI targets, example records).
+3. `supabase/remove-demo-data.sql` (removes every fictional example record).
+4. `pnpm data:sql`, then run `supabase/generated/real-data.sql`. Safe to re-run: it does not delete user-created rows or overwrite edited profiles, preferences or staff outlooks.
 
-## Test logins
+## Accounts and dashboards
 
-All use `DEMO_PASSWORD`. **Remove them before real users join.**
+There are no shared test logins. Each person has their own account and dashboard:
 
-| Login                                          | Portal                                            |
-| ---------------------------------------------- | ------------------------------------------------- |
-| `admin@yv.demo`                                | YV Admin: everything, approves and shares         |
-| `team@yv.demo`                                 | YV Team: no approvals, sharing, team or audit log |
-| `investor.a@demo.test`, `investor.b@demo.test` | Sandbox investor organizations (marked SANDBOX)   |
-| `founder.a@demo.test`                          | Makon AI (real portfolio company, test login)     |
-| `founder.b@demo.test`                          | TimePay (real portfolio company, test login)      |
+- **YV staff** see a personal desk on Overview with what is assigned to them. Admins also see Team & access and the activity log.
+- **Investors** and **founders** see only their own organization's portal.
 
-Every real investor and portfolio company already has its own organization. Its dashboard becomes usable when YV invites a person into it.
+To add someone, pre-approve their email under **Team & access → Pre-approved emails** (with a role and an organization), then ask them to sign up at `/signup` or with Google, Apple or Microsoft. They choose their own password and land straight in their dashboard. Every real investor and portfolio company already has its own organization.
 
 ## The data, and how far to trust it
 
@@ -95,4 +92,3 @@ Co-investment syndication workspace, institutional partnerships pipeline, memo g
 
 - Set `SUPABASE_SECRET_KEY` and `NEXT_PUBLIC_SITE_URL` in hosting.
 - In Supabase Auth: set the Site URL and redirect URLs, switch on Google, Apple and Microsoft, configure a custom SMTP sender, and enable leaked-password protection, CAPTCHA and MFA (see `docs/auth-setup.md`).
-- Remove the test logins and sandbox organizations.

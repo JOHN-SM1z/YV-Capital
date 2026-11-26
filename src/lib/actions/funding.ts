@@ -14,7 +14,7 @@ import { audit } from "@/lib/notify";
 function revalidateFunding(startupId: string) {
   revalidatePath(`/admin/startups/${startupId}`);
   revalidatePath("/admin/insights");
-  revalidatePath("/admin/next-rounds");
+  revalidatePath("/admin/startups");
   revalidatePath("/investor/portfolio", "layout");
 }
 

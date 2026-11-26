@@ -79,11 +79,6 @@ export function Badge({ tone = "neutral", children, className }: { tone?: Tone; 
   );
 }
 
-/** Marks test organizations so they are never mistaken for real investors or companies. */
-export function SandboxBadge({ label }: { label: string }) {
-  return <Badge tone="warn">{label}</Badge>;
-}
-
 export function PageHeader({
   title,
   description,

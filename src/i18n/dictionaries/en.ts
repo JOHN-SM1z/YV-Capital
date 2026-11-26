@@ -21,8 +21,6 @@ export const en = {
     notSet: "Not set",
     unknown: "Unknown",
     none: "None",
-    demo: "DEMO",
-    sandbox: "SANDBOX",
     signOut: "Sign out",
     email: "Email",
     fullName: "Full name",
@@ -72,7 +70,6 @@ export const en = {
     investors: "Investors",
     startups: "Startups",
     matching: "Matching",
-    nextRounds: "Next rounds",
     opportunities: "Opportunities",
     diligence: "Diligence & Q&A",
     meetings: "Meetings & follow-ups",
@@ -522,6 +519,9 @@ export const en = {
     colOwner: "Owner",
     colCheck: "Card figure",
     colOutlook: "Next round",
+    sortBy: "Sort by",
+    sortName: "Sort: name",
+    sortOutlook: "Sort: next-round outlook",
     noMatch: "No startups match",
     portfolioBadge: "YV portfolio",
     footnote:
@@ -616,18 +616,10 @@ export const en = {
   },
 
   nextRounds: {
-    title: "Next-round outlook",
-    subtitle:
-      "Which portfolio companies are likely to open their next round, estimated from public records (funding dates, traction, accelerators, co-investors). Internal only.",
     method:
       "Method: time since last round (typical 12–18 months at pre-seed/seed), disclosed traction, institutional co-investors and accelerator milestones. Companies without public coverage are marked “Not enough data” — ask the founders.",
     colCompany: "Company",
-    colLikelihood: "Outlook",
-    colWindow: "Expected window",
-    colWhy: "Why",
     colRecords: "Records",
-    findInvestors: "Find investors →",
-    count: "{n} companies",
   },
 
   matching: {

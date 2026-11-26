@@ -13,7 +13,6 @@ export default async function AdminLayout({ children }: LayoutProps<"/admin">) {
   const nav: NavItem[] = [
     { href: "/admin", label: t.nav.overview, exact: true },
     { href: "/admin/startups", label: t.nav.startups },
-    { href: "/admin/next-rounds", label: t.nav.nextRounds },
     { href: "/admin/insights", label: t.nav.insights },
     { href: "/admin/investors", label: t.nav.investors },
     { href: "/admin/matching", label: t.nav.matching },

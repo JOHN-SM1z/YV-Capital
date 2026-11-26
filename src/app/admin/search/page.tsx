@@ -4,7 +4,7 @@ import { requireUser, STAFF } from "@/lib/auth";
 import { rows } from "@/lib/db";
 import { participantKey } from "@/lib/funding-stats";
 import { CompanyLogo } from "@/components/company-logo";
-import { Badge, Card, CardHeader, EmptyState, Input, PageHeader, SandboxBadge, buttonClass } from "@/components/ui";
+import { Badge, Card, CardHeader, EmptyState, Input, PageHeader, buttonClass } from "@/components/ui";
 import { isRecordKind } from "@/lib/labels";
 import { getI18n } from "@/i18n/server";
 import { fmt } from "@/i18n/config";
@@ -42,7 +42,7 @@ export default async function SearchPage({ searchParams }: PageProps<"/admin/sea
         .limit(LIMIT),
       supabase
         .from("investors")
-        .select("id, headquarters, evidence_summary, organizations!inner(name, country, is_demo)")
+        .select("id, headquarters, evidence_summary, organizations!inner(name, country)")
         .ilike("organizations.name", term)
         .limit(LIMIT),
       supabase
@@ -98,9 +98,7 @@ export default async function SearchPage({ searchParams }: PageProps<"/admin/sea
                 {investors.map((i) => (
                   <li key={i.id}>
                     <Link href={`/admin/investors/${i.id}`} className="block px-5 py-3 hover:bg-surface/60">
-                      <span className="font-medium">
-                        {i.organizations.name} {i.organizations.is_demo && <SandboxBadge label={t.common.sandbox} />}
-                      </span>
+                      <span className="font-medium">{i.organizations.name}</span>
                       <span className="block truncate text-xs text-muted">
                         {[i.headquarters, i.organizations.country].filter(Boolean).join(", ")}
                         {i.evidence_summary && ` · ${i.evidence_summary}`}

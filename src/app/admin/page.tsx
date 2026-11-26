@@ -214,7 +214,7 @@ export default async function Overview() {
               title={t.admin.nextRoundsCard}
               description={t.admin.nextRoundsCardSub}
               actions={
-                <Link className="text-sm font-medium text-brand-600" href="/admin/next-rounds">
+                <Link className="text-sm font-medium text-brand-600" href="/admin/startups?sort=outlook">
                   {t.admin.seeAll}
                 </Link>
               }

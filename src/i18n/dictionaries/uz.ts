@@ -19,8 +19,6 @@ export const uz: Dictionary = {
     notSet: "Ko‘rsatilmagan",
     unknown: "Noma’lum",
     none: "Yo‘q",
-    demo: "DEMO",
-    sandbox: "TEST",
     signOut: "Chiqish",
     email: "Elektron pochta",
     fullName: "To‘liq ism",
@@ -70,7 +68,6 @@ export const uz: Dictionary = {
     investors: "Investorlar",
     startups: "Startaplar",
     matching: "Moslashtirish",
-    nextRounds: "Keyingi raundlar",
     opportunities: "Imkoniyatlar",
     diligence: "Due diligence va savollar",
     meetings: "Uchrashuvlar va vazifalar",
@@ -526,6 +523,9 @@ export const uz: Dictionary = {
     colOwner: "Mas’ul",
     colCheck: "Kartochkadagi summa",
     colOutlook: "Keyingi raund",
+    sortBy: "Saralash",
+    sortName: "Nomi bo‘yicha",
+    sortOutlook: "Raund prognozi bo‘yicha",
     noMatch: "Filtrlarga mos startap yo‘q",
     portfolioBadge: "YV portfeli",
     footnote:
@@ -620,18 +620,10 @@ export const uz: Dictionary = {
   },
 
   nextRounds: {
-    title: "Keyingi raundlar prognozi",
-    subtitle:
-      "Portfeldagi qaysi kompaniyalar keyingi raundni ochishi mumkinligi — ochiq ma’lumotlar (raund sanalari, o‘sish, akseleratorlar, hammuassislar) asosida. Faqat YV uchun.",
     method:
       "Usul: oxirgi raunddan beri o‘tgan vaqt (pre-seed/seed’da odatda 12–18 oy), oshkor qilingan o‘sish, institutsional hammuassislar va akselerator bosqichlari. Ochiq manbalarda ma’lumoti yo‘q kompaniyalar “Ma’lumot yetarli emas” deb belgilangan — asoschilardan so‘rang.",
     colCompany: "Kompaniya",
-    colLikelihood: "Prognoz",
-    colWindow: "Kutilayotgan davr",
-    colWhy: "Nega",
     colRecords: "Yozuvlar",
-    findInvestors: "Investor topish →",
-    count: "{n} ta kompaniya",
   },
 
   matching: {

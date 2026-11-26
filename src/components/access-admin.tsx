@@ -7,7 +7,7 @@ import { fmt, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries/en";
 import type { Database } from "@/lib/database.types";
 
-type Org = { id: string; name: string; type: Database["public"]["Enums"]["org_type"]; is_demo: boolean };
+type Org = { id: string; name: string; type: Database["public"]["Enums"]["org_type"] };
 type Request = Database["public"]["Tables"]["access_requests"]["Row"];
 type Grant = Database["public"]["Tables"]["access_grants"]["Row"] & { organizations: { name: string } | null };
 
@@ -29,7 +29,6 @@ function OrgOptions({ orgs, t }: { orgs: Org[]; t: Dictionary }) {
             .map((o) => (
               <option key={o.id} value={o.id}>
                 {o.name}
-                {o.is_demo ? ` (${t.common.sandbox})` : ""}
               </option>
             ))}
         </optgroup>

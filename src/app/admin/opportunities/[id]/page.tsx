@@ -9,7 +9,7 @@ import { ActionForm, SubmitButton } from "@/components/action-form";
 import { FitBadge } from "@/components/match-list";
 import { NotesCard } from "@/components/notes-card";
 import { FollowUpsCard } from "@/components/follow-ups-card";
-import { Badge, Card, CardBody, CardHeader, EmptyState, Field, Input, PageHeader, SandboxBadge, Select, Textarea, type ButtonVariant } from "@/components/ui";
+import { Badge, Card, CardBody, CardHeader, EmptyState, Field, Input, PageHeader, Select, Textarea, type ButtonVariant } from "@/components/ui";
 import { attachDocument, detachDocument, revokeAccess, setOpportunityStatus, shareOpportunity, updateOpportunity } from "@/lib/actions/opportunities";
 import { DD_TONE, DOC_TONE, FUNDING_STAGES, INTEREST_TONE, OPPORTUNITY_TONE, isDocType } from "@/lib/labels";
 import { date, dateTime, usd } from "@/lib/format";
@@ -52,7 +52,7 @@ export default async function OpportunityDetail({ params }: PageProps<"/admin/op
   const startup = o.startups;
 
   const [accessRes, interestsRes, roomRes, startupDocsRes, questionsRes, historyRes, investors, startupRows] = await Promise.all([
-    supabase.from("opportunity_access").select("investor_org_id, granted_at, organizations(name, is_demo)").eq("opportunity_id", id),
+    supabase.from("opportunity_access").select("investor_org_id, granted_at, organizations(name)").eq("opportunity_id", id),
     supabase.from("investor_interests").select("investor_org_id, level, indicative_amount, note, updated_at, organizations(name)").eq("opportunity_id", id),
     supabase.from("opportunity_documents").select("document_id, startup_documents(id, title, doc_type, status)").eq("opportunity_id", id),
     supabase.from("startup_documents").select("id, title, doc_type, status").eq("startup_id", startup.id),
@@ -135,8 +135,7 @@ export default async function OpportunityDetail({ params }: PageProps<"/admin/op
                 {access.map((a) => (
                   <li key={a.investor_org_id} className="flex items-center justify-between gap-2 px-5 py-2.5 text-sm">
                     <span>
-                      {a.organizations.name} {a.organizations.is_demo && <SandboxBadge label={t.common.sandbox} />}{" "}
-                      <span className="text-xs text-muted">{fmt(t.common.since, { date: date(a.granted_at, locale) })}</span>
+                      {a.organizations.name} <span className="text-xs text-muted">{fmt(t.common.since, { date: date(a.granted_at, locale) })}</span>
                     </span>
                     {admin && (
                       <ActionForm action={revokeAccess} confirm={x.revokeConfirm}>
@@ -164,7 +163,6 @@ export default async function OpportunityDetail({ params }: PageProps<"/admin/op
                           <span className="tabular w-8 text-right text-sm font-semibold">{c.score}</span>
                           <span className="text-sm">{c.inv.name}</span>
                           <FitBadge fit={c.fit} />
-                          {c.inv.isDemo && <SandboxBadge label={t.common.sandbox} />}
                         </label>
                       ))}
                     </div>

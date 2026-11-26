@@ -14,8 +14,8 @@ https://zjiiglfeuktwkvcojbdi.supabase.co/auth/v1/callback
 
 Supabase dashboard → **Authentication → URL Configuration**
 
-- **Site URL:** the production address, for example `https://platform.yoshlarventures.uz`.
-- **Redirect URLs:** add `http://localhost:3000/auth/callback` and `https://<production-domain>/auth/callback`.
+- **Site URL:** the production address, currently `https://yv-capital.vercel.app`.
+- **Redirect URLs:** add `http://localhost:3000/auth/callback` and `https://yv-capital.vercel.app/auth/callback`.
 
 Also set `NEXT_PUBLIC_SITE_URL` to the production address in hosting.
 

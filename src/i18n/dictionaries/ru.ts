@@ -19,8 +19,6 @@ export const ru: Dictionary = {
     notSet: "Не указано",
     unknown: "Неизвестно",
     none: "Нет",
-    demo: "ДЕМО",
-    sandbox: "ТЕСТ",
     signOut: "Выйти",
     email: "Эл. почта",
     fullName: "Полное имя",
@@ -70,7 +68,6 @@ export const ru: Dictionary = {
     investors: "Инвесторы",
     startups: "Стартапы",
     matching: "Подбор",
-    nextRounds: "Следующие раунды",
     opportunities: "Возможности",
     diligence: "Due diligence и вопросы",
     meetings: "Встречи и задачи",
@@ -521,6 +518,9 @@ export const ru: Dictionary = {
     colOwner: "Ответственный",
     colCheck: "Сумма на карточке",
     colOutlook: "Следующий раунд",
+    sortBy: "Сортировка",
+    sortName: "По названию",
+    sortOutlook: "По прогнозу раунда",
     noMatch: "Нет стартапов по фильтрам",
     portfolioBadge: "Портфель YV",
     footnote:
@@ -615,18 +615,10 @@ export const ru: Dictionary = {
   },
 
   nextRounds: {
-    title: "Прогноз следующих раундов",
-    subtitle:
-      "Какие компании портфеля, вероятно, откроют следующий раунд — оценка по публичным данным (даты раундов, трекшн, акселераторы, соинвесторы). Только для YV.",
     method:
       "Метод: время с последнего раунда (обычно 12–18 месяцев на pre-seed/seed), раскрытый трекшн, институциональные соинвесторы и этапы акселераторов. Компании без публичных упоминаний отмечены «Недостаточно данных» — уточните у основателей.",
     colCompany: "Компания",
-    colLikelihood: "Прогноз",
-    colWindow: "Ожидаемый период",
-    colWhy: "Почему",
     colRecords: "Записи",
-    findInvestors: "Подобрать инвесторов →",
-    count: "Компаний: {n}",
   },
 
   matching: {

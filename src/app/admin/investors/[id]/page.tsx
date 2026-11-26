@@ -10,7 +10,7 @@ import { PreferenceFields } from "@/components/preference-fields";
 import { MatchRow } from "@/components/match-list";
 import { NotesCard } from "@/components/notes-card";
 import { FollowUpsCard } from "@/components/follow-ups-card";
-import { Badge, Card, CardBody, CardHeader, EmptyState, Field, Input, PageHeader, SandboxBadge, Select, Textarea } from "@/components/ui";
+import { Badge, Card, CardBody, CardHeader, EmptyState, Field, Input, PageHeader, Select, Textarea } from "@/components/ui";
 import { addContact, updateInvestorProfile, updatePreferences, updateRelationship } from "@/lib/actions/investors";
 import { inviteUser, setMemberActive } from "@/lib/actions/team";
 import { EVIDENCE_TONE, INTEREST_TONE, MEETING_TONE, OPPORTUNITY_TONE, RELATIONSHIP_TONE, isEvidenceType } from "@/lib/labels";
@@ -67,11 +67,7 @@ export default async function InvestorDetail({ params }: PageProps<"/admin/inves
     <>
       <PageHeader
         back={{ href: "/admin/investors", label: t.nav.investors }}
-        title={
-          <span className="flex flex-wrap items-center gap-2">
-            {org.name} {org.is_demo && <SandboxBadge label={t.common.sandbox} />}
-          </span>
-        }
+        title={<span className="flex flex-wrap items-center gap-2">{org.name}</span>}
         description={
           <span className="flex flex-wrap items-center gap-2">
             {[t.enums.investor_category[inv.category], inv.headquarters, org.country].filter(Boolean).join(" · ")}
